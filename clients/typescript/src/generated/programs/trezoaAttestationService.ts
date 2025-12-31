@@ -11,7 +11,7 @@ import {
   getU8Encoder,
   type Address,
   type ReadonlyUint8Array,
-} from '@solana/kit';
+} from '@trezoa/kit';
 import {
   type ParsedChangeAuthorizedSignersInstruction,
   type ParsedChangeSchemaDescriptionInstruction,
@@ -27,16 +27,16 @@ import {
   type ParsedTokenizeSchemaInstruction,
 } from '../instructions';
 
-export const SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS =
+export const TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS =
   '22zoJMtdu4tQc2PzL74ZUT7FrwgB1Udec8DdW4yw4BdG' as Address<'22zoJMtdu4tQc2PzL74ZUT7FrwgB1Udec8DdW4yw4BdG'>;
 
-export enum SolanaAttestationServiceAccount {
+export enum TrezoaAttestationServiceAccount {
   Attestation,
   Credential,
   Schema,
 }
 
-export enum SolanaAttestationServiceInstruction {
+export enum TrezoaAttestationServiceInstruction {
   CreateCredential,
   CreateSchema,
   ChangeSchemaStatus,
@@ -51,87 +51,87 @@ export enum SolanaAttestationServiceInstruction {
   EmitEvent,
 }
 
-export function identifySolanaAttestationServiceInstruction(
+export function identifyTrezoaAttestationServiceInstruction(
   instruction: { data: ReadonlyUint8Array } | ReadonlyUint8Array
-): SolanaAttestationServiceInstruction {
+): TrezoaAttestationServiceInstruction {
   const data = 'data' in instruction ? instruction.data : instruction;
   if (containsBytes(data, getU8Encoder().encode(0), 0)) {
-    return SolanaAttestationServiceInstruction.CreateCredential;
+    return TrezoaAttestationServiceInstruction.CreateCredential;
   }
   if (containsBytes(data, getU8Encoder().encode(1), 0)) {
-    return SolanaAttestationServiceInstruction.CreateSchema;
+    return TrezoaAttestationServiceInstruction.CreateSchema;
   }
   if (containsBytes(data, getU8Encoder().encode(2), 0)) {
-    return SolanaAttestationServiceInstruction.ChangeSchemaStatus;
+    return TrezoaAttestationServiceInstruction.ChangeSchemaStatus;
   }
   if (containsBytes(data, getU8Encoder().encode(3), 0)) {
-    return SolanaAttestationServiceInstruction.ChangeAuthorizedSigners;
+    return TrezoaAttestationServiceInstruction.ChangeAuthorizedSigners;
   }
   if (containsBytes(data, getU8Encoder().encode(4), 0)) {
-    return SolanaAttestationServiceInstruction.ChangeSchemaDescription;
+    return TrezoaAttestationServiceInstruction.ChangeSchemaDescription;
   }
   if (containsBytes(data, getU8Encoder().encode(5), 0)) {
-    return SolanaAttestationServiceInstruction.ChangeSchemaVersion;
+    return TrezoaAttestationServiceInstruction.ChangeSchemaVersion;
   }
   if (containsBytes(data, getU8Encoder().encode(6), 0)) {
-    return SolanaAttestationServiceInstruction.CreateAttestation;
+    return TrezoaAttestationServiceInstruction.CreateAttestation;
   }
   if (containsBytes(data, getU8Encoder().encode(7), 0)) {
-    return SolanaAttestationServiceInstruction.CloseAttestation;
+    return TrezoaAttestationServiceInstruction.CloseAttestation;
   }
   if (containsBytes(data, getU8Encoder().encode(9), 0)) {
-    return SolanaAttestationServiceInstruction.TokenizeSchema;
+    return TrezoaAttestationServiceInstruction.TokenizeSchema;
   }
   if (containsBytes(data, getU8Encoder().encode(10), 0)) {
-    return SolanaAttestationServiceInstruction.CreateTokenizedAttestation;
+    return TrezoaAttestationServiceInstruction.CreateTokenizedAttestation;
   }
   if (containsBytes(data, getU8Encoder().encode(11), 0)) {
-    return SolanaAttestationServiceInstruction.CloseTokenizedAttestation;
+    return TrezoaAttestationServiceInstruction.CloseTokenizedAttestation;
   }
   if (containsBytes(data, getU8Encoder().encode(228), 0)) {
-    return SolanaAttestationServiceInstruction.EmitEvent;
+    return TrezoaAttestationServiceInstruction.EmitEvent;
   }
   throw new Error(
-    'The provided instruction could not be identified as a solanaAttestationService instruction.'
+    'The provided instruction could not be identified as a trezoaAttestationService instruction.'
   );
 }
 
-export type ParsedSolanaAttestationServiceInstruction<
+export type ParsedTrezoaAttestationServiceInstruction<
   TProgram extends string = '22zoJMtdu4tQc2PzL74ZUT7FrwgB1Udec8DdW4yw4BdG',
 > =
   | ({
-      instructionType: SolanaAttestationServiceInstruction.CreateCredential;
+      instructionType: TrezoaAttestationServiceInstruction.CreateCredential;
     } & ParsedCreateCredentialInstruction<TProgram>)
   | ({
-      instructionType: SolanaAttestationServiceInstruction.CreateSchema;
+      instructionType: TrezoaAttestationServiceInstruction.CreateSchema;
     } & ParsedCreateSchemaInstruction<TProgram>)
   | ({
-      instructionType: SolanaAttestationServiceInstruction.ChangeSchemaStatus;
+      instructionType: TrezoaAttestationServiceInstruction.ChangeSchemaStatus;
     } & ParsedChangeSchemaStatusInstruction<TProgram>)
   | ({
-      instructionType: SolanaAttestationServiceInstruction.ChangeAuthorizedSigners;
+      instructionType: TrezoaAttestationServiceInstruction.ChangeAuthorizedSigners;
     } & ParsedChangeAuthorizedSignersInstruction<TProgram>)
   | ({
-      instructionType: SolanaAttestationServiceInstruction.ChangeSchemaDescription;
+      instructionType: TrezoaAttestationServiceInstruction.ChangeSchemaDescription;
     } & ParsedChangeSchemaDescriptionInstruction<TProgram>)
   | ({
-      instructionType: SolanaAttestationServiceInstruction.ChangeSchemaVersion;
+      instructionType: TrezoaAttestationServiceInstruction.ChangeSchemaVersion;
     } & ParsedChangeSchemaVersionInstruction<TProgram>)
   | ({
-      instructionType: SolanaAttestationServiceInstruction.CreateAttestation;
+      instructionType: TrezoaAttestationServiceInstruction.CreateAttestation;
     } & ParsedCreateAttestationInstruction<TProgram>)
   | ({
-      instructionType: SolanaAttestationServiceInstruction.CloseAttestation;
+      instructionType: TrezoaAttestationServiceInstruction.CloseAttestation;
     } & ParsedCloseAttestationInstruction<TProgram>)
   | ({
-      instructionType: SolanaAttestationServiceInstruction.TokenizeSchema;
+      instructionType: TrezoaAttestationServiceInstruction.TokenizeSchema;
     } & ParsedTokenizeSchemaInstruction<TProgram>)
   | ({
-      instructionType: SolanaAttestationServiceInstruction.CreateTokenizedAttestation;
+      instructionType: TrezoaAttestationServiceInstruction.CreateTokenizedAttestation;
     } & ParsedCreateTokenizedAttestationInstruction<TProgram>)
   | ({
-      instructionType: SolanaAttestationServiceInstruction.CloseTokenizedAttestation;
+      instructionType: TrezoaAttestationServiceInstruction.CloseTokenizedAttestation;
     } & ParsedCloseTokenizedAttestationInstruction<TProgram>)
   | ({
-      instructionType: SolanaAttestationServiceInstruction.EmitEvent;
+      instructionType: TrezoaAttestationServiceInstruction.EmitEvent;
     } & ParsedEmitEventInstruction<TProgram>);

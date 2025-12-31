@@ -1,18 +1,18 @@
 const codama = require("codama");
-const anchorIdl = require("@codama/nodes-from-anchor");
+const trezoaanchorIdl = require("@codama/nodes-from-trezoaanchor");
 const path = require("path");
 const renderers = require("@codama/renderers");
 const { renderVisitor: renderJavaScriptVisitor } = require("@codama/renderers-js");
 const fs = require("fs");
 
-const TOKEN_2022_PROGRAM_ID = 'TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb';
-const SAS_PROGRAM_ID = '22zoJMtdu4tQc2PzL74ZUT7FrwgB1Udec8DdW4yw4BdG';
-const ATA_PROGRAM_ID = 'ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL';
-const EVENT_AUTHORITY_PDA = 'DzSpKpST2TSyrxokMXchFz3G2yn5WEGoxzpGEUDjCX4g';
+const TOKEN_2022_PROGRAM_ID = '4JkrrPuuQPxDZuBW1bgrM1GBa8oYg1LxcuX9szBPh3ic';
+const SAS_PROGRAM_ID = '8AVGA5ygh9XXLYLdnZRc2M5oEPyRLx7zdfjR57XHuFBL';
+const ATA_PROGRAM_ID = 'D5NoYKvb2MX3d8sgxopQ8ejaXDjMcu8YAG1A4d1zmTvv';
+const EVENT_AUTHORITY_PDA = 'EWnRn14TUSkDnsj9XQktY36Gs2FnKrEMKEtCHZRDVWC4';
 
 const projectRoot = path.join(__dirname, "..");
 const idlDir = path.join(projectRoot, "idl");
-const sasIdl = require(path.join(idlDir, "solana_attestation_service.json"));
+const sasIdl = require(path.join(idlDir, "trezoa_attestation_service.json"));
 const rustClientsDir = path.join(__dirname, "..", "clients", "rust");
 const typescriptClientsDir = path.join(
   __dirname,
@@ -48,7 +48,7 @@ function preserveConfigFiles() {
   };
 }
 
-const sasCodama = codama.createFromRoot(anchorIdl.rootNodeFromAnchor(sasIdl));
+const sasCodama = codama.createFromRoot(trezoaanchorIdl.rootNodeFromTrezoaAnchor(sasIdl));
 sasCodama.update(
   codama.bottomUpTransformerVisitor([
     // add 1 byte discriminator

@@ -13,7 +13,7 @@ use pinocchio_token::{
     instructions::{InitializeMint2, TokenProgramVariant},
     TOKEN_2022_PROGRAM_ID,
 };
-use solana_program::pubkey::Pubkey as SolanaPubkey;
+use trezoa_program::pubkey::Pubkey as TrezoaPubkey;
 
 use crate::{
     constants::{sas_pda, SAS_SEED, SCHEMA_MINT_SEED},
@@ -60,9 +60,9 @@ pub fn process_tokenize_schema(
     }
 
     // Validate that mint to initialize matches expected PDA
-    let (mint_pda, mint_bump) = SolanaPubkey::find_program_address(
+    let (mint_pda, mint_bump) = TrezoaPubkey::find_program_address(
         &[SCHEMA_MINT_SEED, schema_info.key()],
-        &SolanaPubkey::from(*program_id),
+        &TrezoaPubkey::from(*program_id),
     );
     if mint_info.key().ne(&mint_pda.to_bytes()) {
         return Err(AttestationServiceError::InvalidMint.into());

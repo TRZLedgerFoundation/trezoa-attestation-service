@@ -12,7 +12,7 @@ import {
     deriveSchemaPda,
     deriveEventAuthorityAddress,
     getCloseAttestationInstruction,
-    SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS
+    TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS
 } from "sas-lib";
 import {
     airdropFactory,
@@ -23,9 +23,9 @@ import {
     Instruction,
     Address,
     Blockhash,
-    createSolanaClient,
+    createTrezoaClient,
     createTransaction,
-    SolanaClient,
+    TrezoaClient,
 } from "gill";
 import {
     estimateComputeUnitLimitFactory
@@ -47,7 +47,7 @@ const CONFIG = {
     ATTESTATION_EXPIRY_DAYS: 365
 };
 
-async function setupWallets(client: SolanaClient) {
+async function setupWallets(client: TrezoaClient) {
     try {
         const payer = await generateKeyPairSigner(); // or loadKeypairSignerFromFile(path.join(process.env.PAYER));
         const authorizedSigner1 = await generateKeyPairSigner();
@@ -70,7 +70,7 @@ async function setupWallets(client: SolanaClient) {
 }
 
 async function sendAndConfirmInstructions(
-    client: SolanaClient,
+    client: TrezoaClient,
     payer: TransactionSigner,
     instructions: Instruction[],
     description: string
@@ -113,7 +113,7 @@ async function verifyAttestation({
     schemaPda,
     userAddress
 }: {
-    client: SolanaClient;
+    client: TrezoaClient;
     schemaPda: Address;
     userAddress: Address;
 }): Promise<boolean> {
@@ -139,9 +139,9 @@ async function verifyAttestation({
 }
 
 async function main() {
-    console.log("Starting Solana Attestation Service Demo\n");
+    console.log("Starting Trezoa Attestation Service Demo\n");
     
-    const client: SolanaClient = createSolanaClient({ urlOrMoniker: CONFIG.CLUSTER_OR_RPC });
+    const client: TrezoaClient = createTrezoaClient({ urlOrMoniker: CONFIG.CLUSTER_OR_RPC });
  
     // Step 1: Setup wallets and fund payer
     console.log("1. Setting up wallets and funding payer...");
@@ -251,14 +251,14 @@ async function main() {
         authority: authorizedSigner1,
         credential: credentialPda,
         eventAuthority,
-        attestationProgram: SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS
+        attestationProgram: TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS
     });
     await sendAndConfirmInstructions(client, payer, [closeAttestationInstruction], 'Closed attestation');
 
 }
  
 main()
-    .then(() => console.log("\nSolana Attestation Service demo completed successfully!"))
+    .then(() => console.log("\nTrezoa Attestation Service demo completed successfully!"))
     .catch((error) => {
         console.error("❌ Demo failed:", error);
         process.exit(1);

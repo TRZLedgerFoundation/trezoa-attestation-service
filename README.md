@@ -1,13 +1,13 @@
-# Solana Attestation Service
+# Trezoa Attestation Service
 
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/solana-foundation/solana-attestation-service)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/trezoa-foundation/trezoa-attestation-service)
 
 ## Running Tests
 
 Run integration tests with the following script
 
 ```
-cargo-build-sbf && SBF_OUT_DIR=$(pwd)/target/sbpf-solana-solana/release cargo test
+cargo-build-sbf && SBF_OUT_DIR=$(pwd)/target/sbpf-trezoa-trezoa/release cargo test
 ```
 
 ## Generating IDL

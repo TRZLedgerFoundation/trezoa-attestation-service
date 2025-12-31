@@ -30,8 +30,8 @@ import {
   type TransactionSigner,
   type WritableAccount,
   type WritableSignerAccount,
-} from '@solana/kit';
-import { SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS } from '../programs';
+} from '@trezoa/kit';
+import { TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS } from '../programs';
 import { getAccountMetaFactory, type ResolvedAccount } from '../shared';
 
 export const TOKENIZE_SCHEMA_DISCRIMINATOR = 9;
@@ -41,7 +41,7 @@ export function getTokenizeSchemaDiscriminatorBytes() {
 }
 
 export type TokenizeSchemaInstruction<
-  TProgram extends string = typeof SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
+  TProgram extends string = typeof TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
   TAccountPayer extends string | AccountMeta<string> = string,
   TAccountAuthority extends string | AccountMeta<string> = string,
   TAccountCredential extends string | AccountMeta<string> = string,
@@ -157,7 +157,7 @@ export function getTokenizeSchemaInstruction<
   TAccountSystemProgram extends string,
   TAccountTokenProgram extends string,
   TProgramAddress extends
-    Address = typeof SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
+    Address = typeof TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
 >(
   input: TokenizeSchemaInput<
     TAccountPayer,
@@ -183,7 +183,7 @@ export function getTokenizeSchemaInstruction<
 > {
   // Program address.
   const programAddress =
-    config?.programAddress ?? SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS;
+    config?.programAddress ?? TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS;
 
   // Original accounts.
   const originalAccounts = {
@@ -244,7 +244,7 @@ export function getTokenizeSchemaInstruction<
 }
 
 export type ParsedTokenizeSchemaInstruction<
-  TProgram extends string = typeof SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
+  TProgram extends string = typeof TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
   TAccountMetas extends readonly AccountMeta[] = readonly AccountMeta[],
 > = {
   programAddress: Address<TProgram>;

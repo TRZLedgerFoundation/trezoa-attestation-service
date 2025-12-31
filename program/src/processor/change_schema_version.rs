@@ -6,7 +6,7 @@ use pinocchio::{
     sysvars::{rent::Rent, Sysvar},
     ProgramResult,
 };
-use solana_program::pubkey::Pubkey as SolanaPubkey;
+use trezoa_program::pubkey::Pubkey as TrezoaPubkey;
 
 use crate::{
     constants::SCHEMA_SEED,
@@ -61,12 +61,12 @@ pub fn process_change_schema_version(
     let description = existing_schema.description;
     let version = &[existing_schema.version.checked_add(1).unwrap()];
 
-    // NOTE: this could be optimized further by removing the `solana-program` dependency
+    // NOTE: this could be optimized further by removing the `trezoa-program` dependency
     // and using `pubkey::checked_create_program_address` from Pinocchio to verify the
     // pubkey and associated bump (needed to be added as arg) is valid.
-    let (schema_pda, schema_bump) = SolanaPubkey::find_program_address(
+    let (schema_pda, schema_bump) = TrezoaPubkey::find_program_address(
         &[SCHEMA_SEED, credential_info.key(), name.as_ref(), version],
-        &SolanaPubkey::from(*program_id),
+        &TrezoaPubkey::from(*program_id),
     );
 
     if new_schema_info.key().ne(&schema_pda.to_bytes()) {

@@ -38,7 +38,7 @@ import {
   type MaybeAccount,
   type MaybeEncodedAccount,
   type ReadonlyUint8Array,
-} from '@solana/kit';
+} from '@trezoa/kit';
 
 export type Attestation = {
   discriminator: number;

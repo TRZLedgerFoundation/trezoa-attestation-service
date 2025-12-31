@@ -9,7 +9,7 @@ use pinocchio::{
     sysvars::{rent::Rent, Sysvar},
     ProgramResult,
 };
-use solana_program::pubkey::Pubkey as SolanaPubkey;
+use trezoa_program::pubkey::Pubkey as TrezoaPubkey;
 
 use crate::{
     constants::CREDENTIAL_SEED,
@@ -37,12 +37,12 @@ pub fn process_create_credential(
     // Validate: system program
     verify_system_program(system_program)?;
 
-    // NOTE: this could be optimized further by removing the `solana-program` dependency
+    // NOTE: this could be optimized further by removing the `trezoa-program` dependency
     // and using `pubkey::checked_create_program_address` from Pinocchio to verify the
     // pubkey and associated bump (needed to be added as arg) is valid.
-    let (credential_pda, credential_bump) = SolanaPubkey::find_program_address(
+    let (credential_pda, credential_bump) = TrezoaPubkey::find_program_address(
         &[CREDENTIAL_SEED, authority_info.key(), args.name],
-        &SolanaPubkey::from(*program_id),
+        &TrezoaPubkey::from(*program_id),
     );
 
     if credential_info.key().ne(&credential_pda.to_bytes()) {

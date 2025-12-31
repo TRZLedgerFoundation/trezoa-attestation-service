@@ -5,7 +5,7 @@ use alloc::vec::Vec;
 use pinocchio::pubkey::Pubkey;
 use shank::ShankInstruction;
 
-/// Instructions for the Solana Attestation Service. This
+/// Instructions for the Trezoa Attestation Service. This
 /// is currently not used in the program business logic, but
 /// we include it for IDL generation.
 #[repr(C, u8)]

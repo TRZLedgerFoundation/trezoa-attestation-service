@@ -1,5 +1,5 @@
 [package]
-name = "solana-attestation-service-macros"
+name = "trezoa-attestation-service-macros"
 version = { workspace = true }
 edition = { workspace = true }
 

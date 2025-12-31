@@ -25,8 +25,8 @@ import {
   type ReadonlySignerAccount,
   type ReadonlyUint8Array,
   type TransactionSigner,
-} from '@solana/kit';
-import { SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS } from '../programs';
+} from '@trezoa/kit';
+import { TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS } from '../programs';
 import { getAccountMetaFactory, type ResolvedAccount } from '../shared';
 
 export const EMIT_EVENT_DISCRIMINATOR = 228;
@@ -36,7 +36,7 @@ export function getEmitEventDiscriminatorBytes() {
 }
 
 export type EmitEventInstruction<
-  TProgram extends string = typeof SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
+  TProgram extends string = typeof TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
   TAccountEventAuthority extends
     | string
     | AccountMeta<string> = 'DzSpKpST2TSyrxokMXchFz3G2yn5WEGoxzpGEUDjCX4g',
@@ -85,14 +85,14 @@ export type EmitEventInput<TAccountEventAuthority extends string = string> = {
 export function getEmitEventInstruction<
   TAccountEventAuthority extends string,
   TProgramAddress extends
-    Address = typeof SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
+    Address = typeof TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
 >(
   input: EmitEventInput<TAccountEventAuthority>,
   config?: { programAddress?: TProgramAddress }
 ): EmitEventInstruction<TProgramAddress, TAccountEventAuthority> {
   // Program address.
   const programAddress =
-    config?.programAddress ?? SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS;
+    config?.programAddress ?? TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS;
 
   // Original accounts.
   const originalAccounts = {
@@ -118,7 +118,7 @@ export function getEmitEventInstruction<
 }
 
 export type ParsedEmitEventInstruction<
-  TProgram extends string = typeof SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
+  TProgram extends string = typeof TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
   TAccountMetas extends readonly AccountMeta[] = readonly AccountMeta[],
 > = {
   programAddress: Address<TProgram>;

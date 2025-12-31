@@ -4,11 +4,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Solana Attestation Service (SAS) is a Solana program that enables creating, managing, and verifying digital attestations on the Solana blockchain. The system provides a framework for issuers to create schemas and issue attestations that can optionally be tokenized as SPL Token-2022 NFTs.
+Trezoa Attestation Service (SAS) is a Trezoa program that enables creating, managing, and verifying digital attestations on the Trezoa blockchain. The system provides a framework for issuers to create schemas and issue attestations that can optionally be tokenized as TPL Token-2022 NFTs.
 
 The repository consists of several main components:
 
-- `program/`: Main Solana program written in Rust using Pinocchio framework
+- `program/`: Main Trezoa program written in Rust using Pinocchio framework
 - `core/`: Shared types and utilities for schema serialization 
 - `clients/`: Auto-generated client libraries for Rust and TypeScript
 - `integration_tests/`: Comprehensive test suite for all program functionality
@@ -19,11 +19,11 @@ The repository consists of several main components:
 ### Building and Testing
 
 ```bash
-# Build the Solana program
+# Build the Trezoa program
 cargo-build-sbf
 
 # Run integration tests
-cargo-build-sbf && SBF_OUT_DIR=$(pwd)/target/sbf-solana-solana/release cargo test
+cargo-build-sbf && SBF_OUT_DIR=$(pwd)/target/sbf-trezoa-trezoa/release cargo test
 
 # Run TypeScript client tests
 cd clients/typescript && npm test
@@ -73,7 +73,7 @@ The system consists of three main components:
 
 3. **Attestation**: Actual attestation data conforming to a schema
    - Contains structured data, expiry time, and nonce
-   - Can be regular attestations or tokenized (as SPL tokens)
+   - Can be regular attestations or tokenized (as TPL tokens)
    - Can be closed by authorized signers
 
 ### Key Features
@@ -86,7 +86,7 @@ The system consists of three main components:
 
 ### Program Structure
 
-- **program/**: Main Solana program written in Rust using Pinocchio framework
+- **program/**: Main Trezoa program written in Rust using Pinocchio framework
   - **src/processor/**: Business logic for each instruction with shared utilities
     - **shared/**: Common utilities (`account_checks.rs`, `pda_utils.rs`, `data_utils.rs`)
   - **src/state/**: On-chain account structures (`attestation.rs`, `credential.rs`, `schema.rs`)
@@ -121,32 +121,32 @@ The system consists of three main components:
   - **typescript/**: TypeScript examples for credential setup, schemas, and attestations
 
 - **idl/**: Interface Definition Language files
-  - **solana_attestation_service.json**: Program IDL defining accounts, instructions, and types
+  - **trezoa_attestation_service.json**: Program IDL defining accounts, instructions, and types
 
 ### Important Constants
 
-- Program ID: `22zoJMtdu4tQc2PzL74ZUT7FrwgB1Udec8DdW4yw4BdG`
-- Token Program: `TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb` (Token-2022)
-- Event Authority PDA: `DzSpKpST2TSyrxokMXchFz3G2yn5WEGoxzpGEUDjCX4g`
+- Program ID: `8AVGA5ygh9XXLYLdnZRc2M5oEPyRLx7zdfjR57XHuFBL`
+- Token Program: `4JkrrPuuQPxDZuBW1bgrM1GBa8oYg1LxcuX9szBPh3ic` (TPL Token Program Main)
+- Event Authority PDA: `EWnRn14TUSkDnsj9XQktY36Gs2FnKrEMKEtCHZRDVWC4`
 
 ## Technology Stack
 
 ### Program Framework
 
-The program uses [**Pinocchio**](https://github.com/anza-xyz/pinocchio) instead of Anchor, chosen for:
+The program uses [**Pinocchio**](https://github.com/trezoa-xyz/pinocchio) instead of TrezoaAnchor, chosen for:
 - Smaller program size and reduced compute costs
 - More control over instruction parsing and execution
 - Direct account validation and manipulation
 
 ### IDL and Client Generation
 
-- [**Shank**](https://github.com/metaplex-foundation/shank): Used for IDL generation with `#[derive(ShankInstruction)]` and `#[account()]` attributes
+- [**Shank**](https://github.com/trezoaplex-foundation/shank): Used for IDL generation with `#[derive(ShankInstruction)]` and `#[account()]` attributes
 - [**Codama**](https://github.com/codama-idl/codama): Transforms Shank-generated IDL into TypeScript and Rust clients
 - Automated generation pipeline ensures clients stay in sync with program changes
 
 ### Token Extensions
 
-Uses SPL Token-2022 with extensions for tokenized attestations:
+Uses TPL Token-2022 with extensions for tokenized attestations:
 - **NonTransferable**: Creates soulbound tokens that cannot be transferred
 - **MetadataPointer**: Enables on-chain metadata storage
 - **GroupMemberPointer**: Links attestations to schema token groups
@@ -156,7 +156,7 @@ Uses SPL Token-2022 with extensions for tokenized attestations:
 ### Event System
 
 - Uses instruction discriminator 228 for event emission via CPI
-- Prevents log truncation issues common with standard Solana logging
+- Prevents log truncation issues common with standard Trezoa logging
 - Emits structured events for attestation lifecycle tracking
 
 ## Code Style & Best Practices
@@ -304,7 +304,7 @@ For tokenized attestations:
 ### Client Integration
 
 - TypeScript clients provide typed interfaces for all instructions
-- Rust clients use `solana_program` types for compatibility
+- Rust clients use `trezoa_program` types for compatibility
 - Both clients handle account resolution and instruction building
 
 ## Configuration & Environment
@@ -322,7 +322,7 @@ Key seeds and identifiers are defined in `program/src/constants.rs`:
 
 ### Development Environment
 
-- Uses Solana CLI tools for program deployment
+- Uses Trezoa CLI tools for program deployment
 - Requires `cargo-build-sbf` for BPF compilation
 - Integration tests run against program test framework
 - TypeScript development requires Node.js and npm/pnpm

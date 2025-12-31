@@ -1,7 +1,7 @@
 import {
     airdropFactory,
-    createSolanaRpc,
-    createSolanaRpcSubscriptions,
+    createTrezoaRpc,
+    createTrezoaRpcSubscriptions,
     generateKeyPairSigner,
     lamports,
     Rpc,
@@ -11,8 +11,8 @@ import {
     setTransactionMessageLifetimeUsingBlockhash,
     setTransactionMessageFeePayerSigner,
     appendTransactionMessageInstructions,
-    SolanaRpcApi,
-    SolanaRpcSubscriptionsApi,
+    TrezoaRpcApi,
+    TrezoaRpcSubscriptionsApi,
     RpcSubscriptions,
     Signature,
     TransactionSigner,
@@ -30,13 +30,13 @@ import {
     assertIsSendableTransaction,
     assertIsTransactionMessageWithBlockhashLifetime,
     assertIsTransactionWithBlockhashLifetime,
-} from "@solana/kit";
+} from "@trezoa/kit";
 import { 
     updateOrAppendSetComputeUnitLimitInstruction, 
     updateOrAppendSetComputeUnitPriceInstruction,
     MAX_COMPUTE_UNIT_LIMIT,
     estimateComputeUnitLimitFactory
-} from "@solana-program/compute-budget";
+} from "@trezoa-program/compute-budget";
 import {
     getCreateCredentialInstruction,
     getCreateSchemaInstruction,
@@ -51,12 +51,12 @@ import {
     deriveAttestationPda,
     deriveEventAuthorityAddress,
     getCloseAttestationInstruction,
-    SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS
+    TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS
 } from "sas-lib";
 
 const CONFIG = {
-    HTTP_CONNECTION_URL: 'https://api.devnet.solana.com', // 'http://127.0.0.1:8899',
-    WSS_CONNECTION_URL: 'wss://api.devnet.solana.com',  // 'ws://127.0.0.1:8900',
+    HTTP_CONNECTION_URL: 'https://api.devnet.trezoa.com', // 'http://127.0.0.1:8899',
+    WSS_CONNECTION_URL: 'wss://api.devnet.trezoa.com',  // 'ws://127.0.0.1:8900',
     CREDENTIAL_NAME: 'TEST-ORGANIZATION',
     SCHEMA_NAME: 'THE-BASICS',
     SCHEMA_LAYOUT: Buffer.from([12, 0, 12]),
@@ -72,8 +72,8 @@ const CONFIG = {
 };
 
 interface Client {
-    rpc: Rpc<SolanaRpcApi>;
-    rpcSubscriptions: RpcSubscriptions<SolanaRpcSubscriptionsApi>;
+    rpc: Rpc<TrezoaRpcApi>;
+    rpcSubscriptions: RpcSubscriptions<TrezoaRpcSubscriptionsApi>;
 }
 
 async function setupWallets(client: Client) {
@@ -198,11 +198,11 @@ async function verifyAttestation({
 }
 
 async function main() {
-    console.log("Starting Solana Attestation Service Demo\n");
+    console.log("Starting Trezoa Attestation Service Demo\n");
 
     const client: Client = {
-        rpc: createSolanaRpc(CONFIG.HTTP_CONNECTION_URL),
-        rpcSubscriptions: createSolanaRpcSubscriptions(CONFIG.WSS_CONNECTION_URL)
+        rpc: createTrezoaRpc(CONFIG.HTTP_CONNECTION_URL),
+        rpcSubscriptions: createTrezoaRpcSubscriptions(CONFIG.WSS_CONNECTION_URL)
     };
 
     // Step 1: Setup wallets and fund payer
@@ -313,14 +313,14 @@ async function main() {
         authority: authorizedSigner1,
         credential: credentialPda,
         eventAuthority,
-        attestationProgram: SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS
+        attestationProgram: TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS
     });
     await sendAndConfirmInstructions(client, payer, [closeAttestationInstruction], 'Closed attestation');
 
 }
 
 main()
-    .then(() => console.log("\nSolana Attestation Service demo completed successfully!"))
+    .then(() => console.log("\nTrezoa Attestation Service demo completed successfully!"))
     .catch((error) => {
         console.error("❌ Demo failed:", error);
         process.exit(1);

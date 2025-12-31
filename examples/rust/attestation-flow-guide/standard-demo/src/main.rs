@@ -2,8 +2,8 @@ use std::time::{SystemTime, UNIX_EPOCH};
 
 use anyhow::Result;
 use borsh::{BorshDeserialize, BorshSerialize};
-use solana_client::rpc_client::RpcClient;
-use solana_sdk::{
+use trezoa_client::rpc_client::RpcClient;
+use trezoa_sdk::{
     commitment_config::CommitmentConfig,
     compute_budget::ComputeBudgetInstruction,
     instruction::Instruction,
@@ -14,15 +14,15 @@ use solana_sdk::{
     signer::Signer,
     transaction::Transaction,
 };
-use solana_system_interface::program::ID as system_program;
+use trezoa_system_interface::program::ID as system_program;
 
-use solana_attestation_service_client::{
+use trezoa_attestation_service_client::{
     accounts::Attestation,
     instructions::{
         ChangeAuthorizedSignersBuilder, CloseAttestationBuilder, CreateAttestationBuilder,
         CreateCredentialBuilder, CreateSchemaBuilder,
     },
-    programs::SOLANA_ATTESTATION_SERVICE_ID,
+    programs::TREZOA_ATTESTATION_SERVICE_ID,
 };
 
 struct Config {
@@ -115,7 +115,7 @@ impl SasDemo {
                 &self.wallets.issuer.pubkey().to_bytes(),
                 self.config.credential_name.as_bytes(),
             ],
-            &SOLANA_ATTESTATION_SERVICE_ID,
+            &TREZOA_ATTESTATION_SERVICE_ID,
         )
     }
 
@@ -127,7 +127,7 @@ impl SasDemo {
                 self.config.schema_name.as_bytes(),
                 &[self.config.schema_version],
             ],
-            &SOLANA_ATTESTATION_SERVICE_ID,
+            &TREZOA_ATTESTATION_SERVICE_ID,
         )
     }
 
@@ -144,7 +144,7 @@ impl SasDemo {
                 &schema_pda.to_bytes(),
                 &nonce.to_bytes(),
             ],
-            &SOLANA_ATTESTATION_SERVICE_ID,
+            &TREZOA_ATTESTATION_SERVICE_ID,
         )
     }
 
@@ -392,7 +392,7 @@ impl SasDemo {
     }
 
     pub async fn run_demo(&self) -> Result<()> {
-        println!("Starting Solana Attestation Service Demo\n");
+        println!("Starting Trezoa Attestation Service Demo\n");
 
         // Step 1: Fund payer
         self.fund_payer().await?;
@@ -434,7 +434,7 @@ impl SasDemo {
         self.close_attestation(&attestation_pda, &credential_pda)
             .await?;
 
-        println!("\nSolana Attestation Service demo completed successfully!");
+        println!("\nTrezoa Attestation Service demo completed successfully!");
 
         Ok(())
     }

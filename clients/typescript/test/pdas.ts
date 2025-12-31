@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { Address, address, ProgramDerivedAddressBump } from "@solana/kit";
+import { Address, address, ProgramDerivedAddressBump } from "@trezoa/kit";
 import { deriveAttestationMintPda, deriveAttestationPda, deriveCredentialPda, deriveEventAuthorityAddress, deriveSchemaMintPda, deriveSchemaPda } from "../src";
 
 describe("PDAs", () => {
@@ -52,7 +52,7 @@ describe("PDAs", () => {
       assert.deepEqual(testPda, expectedPda);
     });
     it("should derive event authority pda PDA", async () => {
-      const expectedPda = 'DzSpKpST2TSyrxokMXchFz3G2yn5WEGoxzpGEUDjCX4g';
+      const expectedPda = 'EWnRn14TUSkDnsj9XQktY36Gs2FnKrEMKEtCHZRDVWC4';
       const testPda = await deriveEventAuthorityAddress()
       assert.deepEqual(testPda, expectedPda);
     });

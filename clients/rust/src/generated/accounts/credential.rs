@@ -7,7 +7,7 @@
 
 use borsh::BorshDeserialize;
 use borsh::BorshSerialize;
-use solana_program::pubkey::Pubkey;
+use trezoa_program::pubkey::Pubkey;
 
 #[derive(BorshSerialize, BorshDeserialize, Clone, Debug, Eq, PartialEq)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
@@ -34,11 +34,11 @@ impl Credential {
     }
 }
 
-impl<'a> TryFrom<&solana_program::account_info::AccountInfo<'a>> for Credential {
+impl<'a> TryFrom<&trezoa_program::account_info::AccountInfo<'a>> for Credential {
     type Error = std::io::Error;
 
     fn try_from(
-        account_info: &solana_program::account_info::AccountInfo<'a>,
+        account_info: &trezoa_program::account_info::AccountInfo<'a>,
     ) -> Result<Self, Self::Error> {
         let mut data: &[u8] = &(*account_info.data).borrow();
         Self::deserialize(&mut data)
@@ -47,8 +47,8 @@ impl<'a> TryFrom<&solana_program::account_info::AccountInfo<'a>> for Credential 
 
 #[cfg(feature = "fetch")]
 pub fn fetch_credential(
-    rpc: &solana_client::rpc_client::RpcClient,
-    address: &solana_program::pubkey::Pubkey,
+    rpc: &trezoa_client::rpc_client::RpcClient,
+    address: &trezoa_program::pubkey::Pubkey,
 ) -> Result<crate::shared::DecodedAccount<Credential>, std::io::Error> {
     let accounts = fetch_all_credential(rpc, &[*address])?;
     Ok(accounts[0].clone())
@@ -56,8 +56,8 @@ pub fn fetch_credential(
 
 #[cfg(feature = "fetch")]
 pub fn fetch_all_credential(
-    rpc: &solana_client::rpc_client::RpcClient,
-    addresses: &[solana_program::pubkey::Pubkey],
+    rpc: &trezoa_client::rpc_client::RpcClient,
+    addresses: &[trezoa_program::pubkey::Pubkey],
 ) -> Result<Vec<crate::shared::DecodedAccount<Credential>>, std::io::Error> {
     let accounts = rpc
         .get_multiple_accounts(addresses)
@@ -81,8 +81,8 @@ pub fn fetch_all_credential(
 
 #[cfg(feature = "fetch")]
 pub fn fetch_maybe_credential(
-    rpc: &solana_client::rpc_client::RpcClient,
-    address: &solana_program::pubkey::Pubkey,
+    rpc: &trezoa_client::rpc_client::RpcClient,
+    address: &trezoa_program::pubkey::Pubkey,
 ) -> Result<crate::shared::MaybeAccount<Credential>, std::io::Error> {
     let accounts = fetch_all_maybe_credential(rpc, &[*address])?;
     Ok(accounts[0].clone())
@@ -90,8 +90,8 @@ pub fn fetch_maybe_credential(
 
 #[cfg(feature = "fetch")]
 pub fn fetch_all_maybe_credential(
-    rpc: &solana_client::rpc_client::RpcClient,
-    addresses: &[solana_program::pubkey::Pubkey],
+    rpc: &trezoa_client::rpc_client::RpcClient,
+    addresses: &[trezoa_program::pubkey::Pubkey],
 ) -> Result<Vec<crate::shared::MaybeAccount<Credential>>, std::io::Error> {
     let accounts = rpc
         .get_multiple_accounts(addresses)
@@ -115,27 +115,27 @@ pub fn fetch_all_maybe_credential(
     Ok(decoded_accounts)
 }
 
-#[cfg(feature = "anchor")]
-impl anchor_lang::AccountDeserialize for Credential {
-    fn try_deserialize_unchecked(buf: &mut &[u8]) -> anchor_lang::Result<Self> {
+#[cfg(feature = "trezoaanchor")]
+impl trezoaanchor_lang::AccountDeserialize for Credential {
+    fn try_deserialize_unchecked(buf: &mut &[u8]) -> trezoaanchor_lang::Result<Self> {
         Ok(Self::deserialize(buf)?)
     }
 }
 
-#[cfg(feature = "anchor")]
-impl anchor_lang::AccountSerialize for Credential {}
+#[cfg(feature = "trezoaanchor")]
+impl trezoaanchor_lang::AccountSerialize for Credential {}
 
-#[cfg(feature = "anchor")]
-impl anchor_lang::Owner for Credential {
+#[cfg(feature = "trezoaanchor")]
+impl trezoaanchor_lang::Owner for Credential {
     fn owner() -> Pubkey {
-        crate::SOLANA_ATTESTATION_SERVICE_ID
+        crate::TREZOA_ATTESTATION_SERVICE_ID
     }
 }
 
-#[cfg(feature = "anchor-idl-build")]
-impl anchor_lang::IdlBuild for Credential {}
+#[cfg(feature = "trezoaanchor-idl-build")]
+impl trezoaanchor_lang::IdlBuild for Credential {}
 
-#[cfg(feature = "anchor-idl-build")]
-impl anchor_lang::Discriminator for Credential {
+#[cfg(feature = "trezoaanchor-idl-build")]
+impl trezoaanchor_lang::Discriminator for Credential {
     const DISCRIMINATOR: [u8; 8] = [0; 8];
 }

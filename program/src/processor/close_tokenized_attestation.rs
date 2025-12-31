@@ -5,7 +5,7 @@ use pinocchio::{
     pubkey::Pubkey,
     ProgramResult,
 };
-use solana_program::pubkey::Pubkey as SolanaPubkey;
+use trezoa_program::pubkey::Pubkey as TrezoaPubkey;
 
 use crate::{
     constants::{sas_pda, ATTESTATION_MINT_SEED, SAS_SEED},
@@ -31,9 +31,9 @@ pub fn process_close_tokenized_attestation(
     verify_token22_program(token_program)?;
 
     // Validate that mint matches expected PDA
-    let (attestation_mint_pda, _) = SolanaPubkey::find_program_address(
+    let (attestation_mint_pda, _) = TrezoaPubkey::find_program_address(
         &[ATTESTATION_MINT_SEED, attestation_info.key()],
-        &SolanaPubkey::from(*program_id),
+        &TrezoaPubkey::from(*program_id),
     );
     if attestation_mint_info
         .key()
@@ -74,7 +74,7 @@ pub fn process_close_tokenized_attestation(
         TokenProgramVariant::Token2022,
     )?;
 
-    // Close Attestation: This needs to be called after closing of Mint due to Solana
+    // Close Attestation: This needs to be called after closing of Mint due to Trezoa
     // limitations around lamports balance. This also verifies accounts[0..7] and
     // attestation_token_account.
     process_close_attestation(

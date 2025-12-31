@@ -19,7 +19,7 @@ pub enum VariableDataTypes {
 
 #[cfg(test)]
 mod test {
-    use solana_attestation_service_macros::SchemaStructSerialize;
+    use trezoa_attestation_service_macros::SchemaStructSerialize;
 
     #[derive(SchemaStructSerialize)]
     struct CustomData {

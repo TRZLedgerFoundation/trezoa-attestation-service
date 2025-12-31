@@ -25,15 +25,15 @@ pinocchio-associated-token-account = { git = "https://github.com/Nagaprasadvr/pi
 proc-macro2 = "1.0.86"
 quote = "1.0.36"
 shank = "0.4.2"
-solana-attestation-service-macros = { path = "cereal_macro" }
-solana-attestation-service-client = { path = "clients/rust" }
-solana-program = "2.1.13"
-solana-program-test = "2.1.13"
-solana-sdk = "2.1.13"
-spl-token-2022 = "8.0.1"
-spl-associated-token-account = "6.0.0"
-spl-token-group-interface = "0.6.0"
-spl-token-metadata-interface = "0.7.0"
+trezoa-attestation-service-macros = { path = "cereal_macro" }
+trezoa-attestation-service-client = { path = "clients/rust" }
+trezoa-program = "2.1.13"
+trezoa-program-test = "2.1.13"
+trezoa-sdk = "2.1.13"
+tpl-token-2022 = "8.0.1"
+tpl-associated-token-account = "6.0.0"
+tpl-token-group-interface = "0.6.0"
+tpl-token-metadata-interface = "0.7.0"
 syn = "2.0.72"
 tokio = "1.43.0"
 bs58 = "0.4"

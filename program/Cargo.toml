@@ -1,5 +1,5 @@
 [package]
-name = "solana-attestation-service"
+name = "trezoa-attestation-service"
 version = { workspace = true }
 edition = { workspace = true }
 
@@ -19,5 +19,5 @@ pinocchio-system = { workspace = true }
 pinocchio-token = { workspace = true }
 pinocchio-associated-token-account = { workspace = true }
 shank = { workspace = true }
-solana-program = { workspace = true }
+trezoa-program = { workspace = true }
 bs58 = { workspace = true }

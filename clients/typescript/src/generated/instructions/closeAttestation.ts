@@ -28,8 +28,8 @@ import {
   type TransactionSigner,
   type WritableAccount,
   type WritableSignerAccount,
-} from '@solana/kit';
-import { SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS } from '../programs';
+} from '@trezoa/kit';
+import { TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS } from '../programs';
 import { getAccountMetaFactory, type ResolvedAccount } from '../shared';
 
 export const CLOSE_ATTESTATION_DISCRIMINATOR = 7;
@@ -39,7 +39,7 @@ export function getCloseAttestationDiscriminatorBytes() {
 }
 
 export type CloseAttestationInstruction<
-  TProgram extends string = typeof SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
+  TProgram extends string = typeof TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
   TAccountPayer extends string | AccountMeta<string> = string,
   TAccountAuthority extends string | AccountMeta<string> = string,
   TAccountCredential extends string | AccountMeta<string> = string,
@@ -138,7 +138,7 @@ export function getCloseAttestationInstruction<
   TAccountSystemProgram extends string,
   TAccountAttestationProgram extends string,
   TProgramAddress extends
-    Address = typeof SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
+    Address = typeof TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
 >(
   input: CloseAttestationInput<
     TAccountPayer,
@@ -162,7 +162,7 @@ export function getCloseAttestationInstruction<
 > {
   // Program address.
   const programAddress =
-    config?.programAddress ?? SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS;
+    config?.programAddress ?? TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS;
 
   // Original accounts.
   const originalAccounts = {
@@ -222,7 +222,7 @@ export function getCloseAttestationInstruction<
 }
 
 export type ParsedCloseAttestationInstruction<
-  TProgram extends string = typeof SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
+  TProgram extends string = typeof TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
   TAccountMetas extends readonly AccountMeta[] = readonly AccountMeta[],
 > = {
   programAddress: Address<TProgram>;

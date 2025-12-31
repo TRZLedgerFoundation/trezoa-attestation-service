@@ -14,37 +14,37 @@ import {
     sendAndConfirmTransactionFactory,
     createKeyPairFromBytes,
     type Address,
-    createSolanaRpc,
+    createTrezoaRpc,
     type Rpc,
-    type SolanaRpcApi,
-    createSolanaRpcSubscriptions,
+    type TrezoaRpcApi,
+    createTrezoaRpcSubscriptions,
     type RpcSubscriptions,
-    type SolanaRpcSubscriptionsApi,
+    type TrezoaRpcSubscriptionsApi,
     appendTransactionMessageInstruction,
     setTransactionMessageLifetimeUsingBlockhash,
     setTransactionMessageFeePayer,
     createTransactionMessage,
     pipe,
     getSignatureFromTransaction,
-  } from "@solana/kit";
-  import { createKeyPairSignerFromPrivateKeyBytes, signTransactionMessageWithSigners } from "@solana/signers";
+  } from "@trezoa/kit";
+  import { createKeyPairSignerFromPrivateKeyBytes, signTransactionMessageWithSigners } from "@trezoa/signers";
   import * as bs58 from "bs58";
 
   async function createSchema() {
 
     type RpcClient = {
-      rpc: Rpc<SolanaRpcApi>;
-      rpcSubscriptions: RpcSubscriptions<SolanaRpcSubscriptionsApi>;
+      rpc: Rpc<TrezoaRpcApi>;
+      rpcSubscriptions: RpcSubscriptions<TrezoaRpcSubscriptionsApi>;
     };
   
   
-    const createDefaultSolanaClient = (): RpcClient => {
-      const rpc = createSolanaRpc(`https://${process.env.RPC_ROOT!}`);
-      const rpcSubscriptions = createSolanaRpcSubscriptions(`wss://${process.env.RPC_ROOT!}`);
+    const createDefaultTrezoaClient = (): RpcClient => {
+      const rpc = createTrezoaRpc(`https://${process.env.RPC_ROOT!}`);
+      const rpcSubscriptions = createTrezoaRpcSubscriptions(`wss://${process.env.RPC_ROOT!}`);
       return { rpc, rpcSubscriptions };
     };
   
-    const { rpc, rpcSubscriptions } = createDefaultSolanaClient();
+    const { rpc, rpcSubscriptions } = createDefaultTrezoaClient();
   
     const payer = await createKeyPairSignerFromPrivateKeyBytes(bs58.default.decode(process.env.PAYER_KEYPAIR!));
     const authority = await createKeyPairSignerFromPrivateKeyBytes(bs58.default.decode(process.env.AUTHORITY_KEYPAIR!));
@@ -59,7 +59,7 @@ import {
         "fee_payer": 12,
         "allowed_programs": 25,
         "allowed_tokens": 25,
-        "allowed_spl_paid_tokens": 25,
+        "allowed_tpl_paid_tokens": 25,
         "max_signatures": 2,
         "max_allowed_lamports": 3,
         "disallowed_accounts": 25,

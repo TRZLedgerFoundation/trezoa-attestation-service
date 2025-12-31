@@ -1,10 +1,10 @@
 use borsh::BorshDeserialize;
 use helpers::program_test_context;
-use solana_attestation_service_client::{
+use trezoa_attestation_service_client::{
     accounts::Credential,
     instructions::{ChangeAuthorizedSignersBuilder, CreateCredentialBuilder},
 };
-use solana_sdk::{
+use trezoa_sdk::{
     pubkey::Pubkey, signature::Keypair, signer::Signer, system_program, transaction::Transaction,
 };
 
@@ -23,7 +23,7 @@ async fn change_authorized_signers_success() {
             &authority.pubkey().to_bytes(),
             name.as_bytes(),
         ],
-        &Pubkey::from(solana_attestation_service_client::programs::SOLANA_ATTESTATION_SERVICE_ID),
+        &Pubkey::from(trezoa_attestation_service_client::programs::TREZOA_ATTESTATION_SERVICE_ID),
     );
 
     let ix = CreateCredentialBuilder::new()

@@ -6,7 +6,7 @@ use pinocchio::{
     sysvars::{rent::Rent, Sysvar},
     ProgramResult,
 };
-use solana_program::pubkey::Pubkey as SolanaPubkey;
+use trezoa_program::pubkey::Pubkey as TrezoaPubkey;
 
 use crate::{
     constants::SCHEMA_SEED,
@@ -45,13 +45,13 @@ pub fn process_create_schema(
         return Err(ProgramError::IncorrectAuthority);
     }
 
-    // NOTE: this could be optimized further by removing the `solana-program` dependency
+    // NOTE: this could be optimized further by removing the `trezoa-program` dependency
     // and using `pubkey::checked_create_program_address` from Pinocchio to verify the
     // pubkey and associated bump (needed to be added as arg) is valid.
     let version = &[1];
-    let (schema_pda, schema_bump) = SolanaPubkey::find_program_address(
+    let (schema_pda, schema_bump) = TrezoaPubkey::find_program_address(
         &[SCHEMA_SEED, credential_info.key(), args.name, version],
-        &SolanaPubkey::from(*program_id),
+        &TrezoaPubkey::from(*program_id),
     );
 
     if schema_info.key().ne(&schema_pda.to_bytes()) {

@@ -2,8 +2,8 @@ use std::time::{SystemTime, UNIX_EPOCH};
 
 use anyhow::Result;
 use borsh::{BorshDeserialize, BorshSerialize};
-use solana_client::rpc_client::RpcClient;
-use solana_sdk::{
+use trezoa_client::rpc_client::RpcClient;
+use trezoa_sdk::{
     commitment_config::CommitmentConfig,
     compute_budget::ComputeBudgetInstruction,
     instruction::Instruction,
@@ -14,9 +14,9 @@ use solana_sdk::{
     signer::Signer,
     transaction::Transaction,
 };
-use solana_system_interface::program::ID as system_program;
+use trezoa_system_interface::program::ID as system_program;
 
-use solana_attestation_service_client::{
+use trezoa_attestation_service_client::{
     accounts::Attestation,
     instructions::{
         ChangeAuthorizedSignersBuilder,
@@ -29,7 +29,7 @@ use solana_attestation_service_client::{
         CreateTokenizedAttestationBuilder,
         TokenizeSchemaBuilder,
     },
-    programs::SOLANA_ATTESTATION_SERVICE_ID,
+    programs::TREZOA_ATTESTATION_SERVICE_ID,
 };
 
 use spl_associated_token_account::get_associated_token_address_with_program_id;
@@ -153,7 +153,7 @@ impl SasDemo {
                 &self.wallets.issuer.pubkey().to_bytes(),
                 self.config.credential_name.as_bytes(),
             ],
-            &SOLANA_ATTESTATION_SERVICE_ID,
+            &TREZOA_ATTESTATION_SERVICE_ID,
         )
     }
 
@@ -165,7 +165,7 @@ impl SasDemo {
                 self.config.schema_name.as_bytes(),
                 &[self.config.schema_version],
             ],
-            &SOLANA_ATTESTATION_SERVICE_ID,
+            &TREZOA_ATTESTATION_SERVICE_ID,
         )
     }
 
@@ -182,26 +182,26 @@ impl SasDemo {
                 &schema_pda.to_bytes(),
                 &nonce.to_bytes(),
             ],
-            &SOLANA_ATTESTATION_SERVICE_ID,
+            &TREZOA_ATTESTATION_SERVICE_ID,
         )
     }
 
     fn derive_schema_mint_pda(&self, schema_pda: &Pubkey) -> (Pubkey, u8) {
         Pubkey::find_program_address(
             &[b"schemaMint", &schema_pda.to_bytes()],
-            &SOLANA_ATTESTATION_SERVICE_ID,
+            &TREZOA_ATTESTATION_SERVICE_ID,
         )
     }
 
     fn derive_attestation_mint_pda(&self, attestation_pda: &Pubkey) -> (Pubkey, u8) {
         Pubkey::find_program_address(
             &[b"attestationMint", &attestation_pda.to_bytes()],
-            &SOLANA_ATTESTATION_SERVICE_ID,
+            &TREZOA_ATTESTATION_SERVICE_ID,
         )
     }
 
     fn derive_sas_authority_address() -> (Pubkey, u8) {
-        Pubkey::find_program_address(&[b"sas"], &SOLANA_ATTESTATION_SERVICE_ID)
+        Pubkey::find_program_address(&[b"sas"], &TREZOA_ATTESTATION_SERVICE_ID)
     }
 
     fn calculate_schema_mint_size(&self) -> usize {
@@ -655,7 +655,7 @@ impl SasDemo {
             .sas_pda(sas_authority)
             .credential(*credential_pda)
             .attestation(*attestation_pda)
-            .attestation_program(SOLANA_ATTESTATION_SERVICE_ID)
+            .attestation_program(TREZOA_ATTESTATION_SERVICE_ID)
             .attestation_mint(*attestation_mint_pda)
             .attestation_token_account(recipient_token_account)
             .instruction();
@@ -671,7 +671,7 @@ impl SasDemo {
     }
 
     pub async fn run_demo(&self) -> Result<()> {
-        println!("Starting Solana Attestation Service Demo\n");
+        println!("Starting Trezoa Attestation Service Demo\n");
 
         // Step 1: Fund payer
         self.fund_payer().await?;
@@ -713,13 +713,13 @@ impl SasDemo {
         self.close_attestation(&attestation_pda, &credential_pda)
             .await?;
 
-        println!("\nSolana Attestation Service demo completed successfully!");
+        println!("\nTrezoa Attestation Service demo completed successfully!");
 
         Ok(())
     }
 
     pub async fn run_tokenized_demo(&self) -> Result<()> {
-        println!("Starting Solana Attestation Service Tokenized Demo\n");
+        println!("Starting Trezoa Attestation Service Tokenized Demo\n");
         let config = TokenizedConfig::default();
 
         // Steps 1-3: Same as regular demo
@@ -776,7 +776,7 @@ impl SasDemo {
         self.close_tokenized_attestation(&attestation_pda, &attestation_mint_pda, &credential_pda)
             .await?;
 
-        println!("\nSolana Attestation Service tokenized demo completed successfully!");
+        println!("\nTrezoa Attestation Service tokenized demo completed successfully!");
         Ok(())
     }
 }

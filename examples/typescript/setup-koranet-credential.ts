@@ -11,38 +11,38 @@ import {
   import {
     sendAndConfirmTransactionFactory,
     type Address,
-    createSolanaRpc,
+    createTrezoaRpc,
     type Rpc,
-    type SolanaRpcApi,
-    createSolanaRpcSubscriptions,
+    type TrezoaRpcApi,
+    createTrezoaRpcSubscriptions,
     type RpcSubscriptions,
-    type SolanaRpcSubscriptionsApi,
+    type TrezoaRpcSubscriptionsApi,
     appendTransactionMessageInstruction,
     setTransactionMessageLifetimeUsingBlockhash,
     setTransactionMessageFeePayer,
     createTransactionMessage,
     pipe,
     getSignatureFromTransaction,
-  } from "@solana/kit";
-  import { createKeyPairSignerFromPrivateKeyBytes, signTransactionMessageWithSigners } from "@solana/signers";
+  } from "@trezoa/kit";
+  import { createKeyPairSignerFromPrivateKeyBytes, signTransactionMessageWithSigners } from "@trezoa/signers";
   import * as bs58 from "bs58";
 
   async function createCredential() {
 
     type RpcClient = {
-      rpc: Rpc<SolanaRpcApi>;
-      rpcSubscriptions: RpcSubscriptions<SolanaRpcSubscriptionsApi>;
+      rpc: Rpc<TrezoaRpcApi>;
+      rpcSubscriptions: RpcSubscriptions<TrezoaRpcSubscriptionsApi>;
     };
   
   
-    // Initialize connection using @solana/kit
-    const createDefaultSolanaClient = (): RpcClient => {
-      const rpc = createSolanaRpc(`https://${process.env.RPC_ROOT!}`);
-      const rpcSubscriptions = createSolanaRpcSubscriptions(`wss://${process.env.RPC_ROOT!}`);
+    // Initialize connection using @trezoa/kit
+    const createDefaultTrezoaClient = (): RpcClient => {
+      const rpc = createTrezoaRpc(`https://${process.env.RPC_ROOT!}`);
+      const rpcSubscriptions = createTrezoaRpcSubscriptions(`wss://${process.env.RPC_ROOT!}`);
       return { rpc, rpcSubscriptions };
     };
   
-    const { rpc, rpcSubscriptions } = createDefaultSolanaClient();
+    const { rpc, rpcSubscriptions } = createDefaultTrezoaClient();
   
     const recipient = await createKeyPairSignerFromPrivateKeyBytes(bs58.default.decode(process.env.RECIPIENT_KEYPAIR!));
     const authority = await createKeyPairSignerFromPrivateKeyBytes(bs58.default.decode(process.env.AUTHORITY_KEYPAIR!));

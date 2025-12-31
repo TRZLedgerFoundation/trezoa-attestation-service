@@ -1,16 +1,16 @@
 use borsh::{BorshDeserialize, BorshSerialize};
 use helpers::program_test_context;
-use solana_attestation_service_client::{
+use trezoa_attestation_service_client::{
     accounts::Attestation,
     instructions::{
         CloseTokenizedAttestationBuilder, CreateCredentialBuilder, CreateSchemaBuilder,
         CreateTokenizedAttestationBuilder, TokenizeSchemaBuilder,
     },
-    programs::SOLANA_ATTESTATION_SERVICE_ID,
+    programs::TREZOA_ATTESTATION_SERVICE_ID,
 };
-use solana_attestation_service_macros::SchemaStructSerialize;
-use solana_program_test::ProgramTestContext;
-use solana_sdk::{
+use trezoa_attestation_service_macros::SchemaStructSerialize;
+use trezoa_program_test::ProgramTestContext;
+use trezoa_sdk::{
     clock::Clock, program_option::COption, program_pack::Pack, pubkey::Pubkey, signature::Keypair,
     signer::Signer, system_program, transaction::Transaction,
 };
@@ -64,7 +64,7 @@ async fn setup() -> TestFixtures {
             &authority.pubkey().to_bytes(),
             credential_name.as_bytes(),
         ],
-        &solana_attestation_service_client::programs::SOLANA_ATTESTATION_SERVICE_ID,
+        &trezoa_attestation_service_client::programs::TREZOA_ATTESTATION_SERVICE_ID,
     );
 
     let create_credential_ix = CreateCredentialBuilder::new()
@@ -88,7 +88,7 @@ async fn setup() -> TestFixtures {
             schema_name.as_bytes(),
             &[1],
         ],
-        &solana_attestation_service_client::programs::SOLANA_ATTESTATION_SERVICE_ID,
+        &trezoa_attestation_service_client::programs::TREZOA_ATTESTATION_SERVICE_ID,
     );
     let create_schema_ix = CreateSchemaBuilder::new()
         .payer(ctx.payer.pubkey())
@@ -113,10 +113,10 @@ async fn setup() -> TestFixtures {
         .await
         .unwrap();
 
-    let (sas_pda, _bump) = Pubkey::find_program_address(&[b"sas"], &SOLANA_ATTESTATION_SERVICE_ID);
+    let (sas_pda, _bump) = Pubkey::find_program_address(&[b"sas"], &TREZOA_ATTESTATION_SERVICE_ID);
     let (schema_mint_pda, _bump) = Pubkey::find_program_address(
         &[b"schemaMint", &schema_pda.to_bytes()],
-        &SOLANA_ATTESTATION_SERVICE_ID,
+        &TREZOA_ATTESTATION_SERVICE_ID,
     );
 
     let nonce = Pubkey::new_unique();
@@ -127,12 +127,12 @@ async fn setup() -> TestFixtures {
             &schema_pda.to_bytes(),
             &nonce.to_bytes(),
         ],
-        &SOLANA_ATTESTATION_SERVICE_ID,
+        &TREZOA_ATTESTATION_SERVICE_ID,
     )
     .0;
     let (attestation_mint_pda, _bump) = Pubkey::find_program_address(
         &[b"attestationMint", &attestation_pda.to_bytes()],
-        &SOLANA_ATTESTATION_SERVICE_ID,
+        &TREZOA_ATTESTATION_SERVICE_ID,
     );
 
     let recipient = Pubkey::new_unique();
@@ -491,7 +491,7 @@ async fn close_tokenized_attestation_success() {
         .unwrap();
 
     let (event_auth_pda, _bump) =
-        Pubkey::find_program_address(&[b"__event_authority"], &SOLANA_ATTESTATION_SERVICE_ID);
+        Pubkey::find_program_address(&[b"__event_authority"], &TREZOA_ATTESTATION_SERVICE_ID);
 
     let close_attestation_ix = CloseTokenizedAttestationBuilder::new()
         .payer(ctx.payer.pubkey())
@@ -501,7 +501,7 @@ async fn close_tokenized_attestation_success() {
         .event_authority(event_auth_pda)
         .system_program(system_program::ID)
         .attestation_program(
-            solana_attestation_service_client::programs::SOLANA_ATTESTATION_SERVICE_ID,
+            trezoa_attestation_service_client::programs::TREZOA_ATTESTATION_SERVICE_ID,
         )
         .attestation_mint(attestation_mint_pda)
         .sas_pda(sas_pda)
@@ -618,7 +618,7 @@ async fn update_tokenized_attestation_success() {
         .unwrap();
 
     let (event_auth_pda, _bump) =
-        Pubkey::find_program_address(&[b"__event_authority"], &SOLANA_ATTESTATION_SERVICE_ID);
+        Pubkey::find_program_address(&[b"__event_authority"], &TREZOA_ATTESTATION_SERVICE_ID);
 
     let close_attestation_ix = CloseTokenizedAttestationBuilder::new()
         .payer(ctx.payer.pubkey())
@@ -628,7 +628,7 @@ async fn update_tokenized_attestation_success() {
         .event_authority(event_auth_pda)
         .system_program(system_program::ID)
         .attestation_program(
-            solana_attestation_service_client::programs::SOLANA_ATTESTATION_SERVICE_ID,
+            trezoa_attestation_service_client::programs::TREZOA_ATTESTATION_SERVICE_ID,
         )
         .attestation_mint(attestation_mint_pda)
         .sas_pda(sas_pda)

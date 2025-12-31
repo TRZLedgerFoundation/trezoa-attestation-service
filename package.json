@@ -1,19 +1,19 @@
 {
-  "name": "solana-attestation-service",
+  "name": "trezoa-attestation-service",
   "version": "1.0.7",
   "main": "index.js",
-  "description": "Solana Attestation Service",
-  "repository": "git@github.com:solana-foundation/solana-attestation-service.git",
+  "description": "Trezoa Attestation Service",
+  "repository": "git@github.com:trzledgerfoundation/trezoa-attestation-service.git",
   "license": "MIT",
   "scripts": {
     "generate-clients": "node ./scripts/generate-clients.js",
     "generate-idl": "shank idl -r program -o idl"
   },
   "dependencies": {
-    "@codama/nodes-from-anchor": "^1.3.0",
+    "@codama/nodes-from-trezoaanchor": "^1.3.0",
     "@codama/renderers": "^1.0.23",
     "@codama/renderers-js": "^1.5.0",
-    "@solana/kit": "^2.1.1",
+    "@trezoa/kit": "^2.1.1",
     "codama": "^1.4.0"
   },
   "devDependencies": {

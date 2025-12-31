@@ -1,11 +1,11 @@
 use borsh::BorshDeserialize;
 use helpers::program_test_context;
-use solana_attestation_service_client::{
+use trezoa_attestation_service_client::{
     accounts::Schema,
     instructions::{ChangeSchemaStatusBuilder, CreateCredentialBuilder, CreateSchemaBuilder},
 };
-use solana_attestation_service_macros::SchemaStructSerialize;
-use solana_sdk::{
+use trezoa_attestation_service_macros::SchemaStructSerialize;
+use trezoa_sdk::{
     pubkey::Pubkey, signature::Keypair, signer::Signer, system_program, transaction::Transaction,
 };
 
@@ -28,7 +28,7 @@ async fn pause_and_unpause_schema_success() {
             &authority.pubkey().to_bytes(),
             credential_name.as_bytes(),
         ],
-        &Pubkey::from(solana_attestation_service_client::programs::SOLANA_ATTESTATION_SERVICE_ID),
+        &Pubkey::from(trezoa_attestation_service_client::programs::TREZOA_ATTESTATION_SERVICE_ID),
     );
 
     let create_credential_ix = CreateCredentialBuilder::new()
@@ -63,7 +63,7 @@ async fn pause_and_unpause_schema_success() {
             schema_name.as_bytes(),
             &[1],
         ],
-        &Pubkey::from(solana_attestation_service_client::programs::SOLANA_ATTESTATION_SERVICE_ID),
+        &Pubkey::from(trezoa_attestation_service_client::programs::TREZOA_ATTESTATION_SERVICE_ID),
     );
     let create_schema_ix = CreateSchemaBuilder::new()
         .payer(ctx.payer.pubkey())

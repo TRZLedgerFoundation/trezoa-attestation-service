@@ -32,8 +32,8 @@ import {
   type TransactionSigner,
   type WritableAccount,
   type WritableSignerAccount,
-} from '@solana/kit';
-import { SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS } from '../programs';
+} from '@trezoa/kit';
+import { TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS } from '../programs';
 import { getAccountMetaFactory, type ResolvedAccount } from '../shared';
 
 export const CHANGE_AUTHORIZED_SIGNERS_DISCRIMINATOR = 3;
@@ -43,7 +43,7 @@ export function getChangeAuthorizedSignersDiscriminatorBytes() {
 }
 
 export type ChangeAuthorizedSignersInstruction<
-  TProgram extends string = typeof SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
+  TProgram extends string = typeof TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
   TAccountPayer extends string | AccountMeta<string> = string,
   TAccountAuthority extends string | AccountMeta<string> = string,
   TAccountCredential extends string | AccountMeta<string> = string,
@@ -132,7 +132,7 @@ export function getChangeAuthorizedSignersInstruction<
   TAccountCredential extends string,
   TAccountSystemProgram extends string,
   TProgramAddress extends
-    Address = typeof SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
+    Address = typeof TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
 >(
   input: ChangeAuthorizedSignersInput<
     TAccountPayer,
@@ -150,7 +150,7 @@ export function getChangeAuthorizedSignersInstruction<
 > {
   // Program address.
   const programAddress =
-    config?.programAddress ?? SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS;
+    config?.programAddress ?? TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS;
 
   // Original accounts.
   const originalAccounts = {
@@ -195,7 +195,7 @@ export function getChangeAuthorizedSignersInstruction<
 }
 
 export type ParsedChangeAuthorizedSignersInstruction<
-  TProgram extends string = typeof SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
+  TProgram extends string = typeof TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
   TAccountMetas extends readonly AccountMeta[] = readonly AccountMeta[],
 > = {
   programAddress: Address<TProgram>;

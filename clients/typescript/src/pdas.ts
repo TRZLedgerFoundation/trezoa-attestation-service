@@ -1,5 +1,5 @@
-import { Address, getAddressEncoder, getProgramDerivedAddress } from "@solana/kit";
-import { SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS } from "./generated/programs";
+import { Address, getAddressEncoder, getProgramDerivedAddress } from "@trezoa/kit";
+import { TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS } from "./generated/programs";
 
 export const ATTESTATION_SEED = "attestation";
 export const CREDENTIAL_SEED = "credential";
@@ -19,7 +19,7 @@ export const ATTESTATION_MINT_SEED = "attestationMint";
 export const deriveEventAuthorityAddress = async () =>
   (
     await getProgramDerivedAddress({
-      programAddress: SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
+      programAddress: TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
       seeds: [EVENT_AUTHORITY_SEED],
     })
   )[0];
@@ -30,7 +30,7 @@ export const deriveEventAuthorityAddress = async () =>
 export const deriveSasAuthorityAddress = async () =>
   (
     await getProgramDerivedAddress({
-      programAddress: SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
+      programAddress: TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
       seeds: [SAS_SEED],
     })
   )[0];
@@ -50,7 +50,7 @@ export const deriveCredentialPda = ({
   name: string;
 }) =>
   getProgramDerivedAddress({
-    programAddress: SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
+    programAddress: TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
     seeds: [CREDENTIAL_SEED, getAddressEncoder().encode(authority), name],
   });
 
@@ -73,7 +73,7 @@ export const deriveSchemaPda = ({
 }) => {
   const versionSeed = Uint8Array.from([version]);
   return getProgramDerivedAddress({
-    programAddress: SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
+    programAddress: TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
     seeds: [SCHEMA_SEED, getAddressEncoder().encode(credential), name, versionSeed],
   });
 };
@@ -97,7 +97,7 @@ export const deriveAttestationPda = ({
 }) => {
   const addressEncoder = getAddressEncoder();
   return getProgramDerivedAddress({
-    programAddress: SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
+    programAddress: TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
     seeds: [ATTESTATION_SEED, addressEncoder.encode(credential), addressEncoder.encode(schema), addressEncoder.encode(nonce)],
   });
 }
@@ -111,7 +111,7 @@ export const deriveAttestationPda = ({
  */
 export const deriveSchemaMintPda = ({ schema }: { schema: Address }) =>
   getProgramDerivedAddress({
-    programAddress: SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
+    programAddress: TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
     seeds: [SCHEMA_MINT_SEED, getAddressEncoder().encode(schema)],
   });
 
@@ -126,6 +126,6 @@ export const deriveAttestationMintPda = ({
   attestation: Address;
 }) =>
   getProgramDerivedAddress({
-    programAddress: SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
+    programAddress: TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
     seeds: [ATTESTATION_MINT_SEED, getAddressEncoder().encode(attestation)],
   });

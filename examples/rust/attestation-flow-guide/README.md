@@ -1,24 +1,24 @@
-# Solana Attestation Service Rust Examples
+# Trezoa Attestation Service Rust Examples
 
-This repository contains Rust implementation examples for the Solana Attestation Service (SAS) to create, manage, verify, and close digital credentials on Solana. These examples demonstrate the complete attestation lifecycle using the `solana-attestation-service-client` crate. For more detailed explanations and step-by-step walkthroughs, see the comprehensive guides:
+This repository contains Rust implementation examples for the Trezoa Attestation Service (SAS) to create, manage, verify, and close digital credentials on Trezoa. These examples demonstrate the complete attestation lifecycle using the `trezoa-attestation-service-client` crate. For more detailed explanations and step-by-step walkthroughs, see the comprehensive guides:
 
 | Title | Directory | Guide | Description |
 |-------|-----------|-------------|-------------|
-| Standard Attestation Demo | `standard-demo/` | [How to Build Digital Credentials using Solana Attestation Service](https://attest.solana.com/docs/guides/rust/how-to-create-digital-credentials) | Basic credential and attestation workflow using Rust |
-| Tokenized Attestation Demo | `tokenization-demo/` | [How to Create Tokenized Credentials using Solana Attestation Service](https://attest.solana.com/docs/guides/rust/tokenized-attestations) | Create credentials as SPL tokens using Token-2022 and Rust |
+| Standard Attestation Demo | `standard-demo/` | [How to Build Digital Credentials using Trezoa Attestation Service](https://attest.trezoa.com/docs/guides/rust/how-to-create-digital-credentials) | Basic credential and attestation workflow using Rust |
+| Tokenized Attestation Demo | `tokenization-demo/` | [How to Create Tokenized Credentials using Trezoa Attestation Service](https://attest.trezoa.com/docs/guides/rust/tokenized-attestations) | Create credentials as TPL tokens using Token-2022 and Rust |
 
 
 ## Requirements
 
 - [Rust](https://rustup.rs/) (latest stable version)
-- [Solana CLI](https://solana.com/docs/intro/installation) (v2.2.x or greater)
+- [Trezoa CLI](https://trezoa.com/docs/intro/installation) (v2.2.x or greater)
 
 ## Installation
 
 Clone the repository and navigate to the Rust examples:
 
 ```bash
-git clone https://github.com/solana-foundation/solana-attestation-service
+git clone https://github.com/trzledgerfoundation/trezoa-attestation-service
 cd examples/rust/attestation-flow-guide
 ```
 
@@ -36,12 +36,12 @@ For local development and testing:
 1. **Download the SAS program:**
    ```bash
    mkdir -p programs
-   solana program dump -um 22zoJMtdu4tQc2PzL74ZUT7FrwgB1Udec8DdW4yw4BdG programs/sas.so
+   trezoa program dump -um 8AVGA5ygh9XXLYLdnZRc2M5oEPyRLx7zdfjR57XHuFBL programs/sas.so
    ```
 
 2. **Start local validator** (in a separate terminal):
    ```bash
-   solana-test-validator -r --bpf-program 22zoJMtdu4tQc2PzL74ZUT7FrwgB1Udec8DdW4yw4BdG programs/sas.so
+   trezoa-test-validator -r --bpf-program 8AVGA5ygh9XXLYLdnZRc2M5oEPyRLx7zdfjR57XHuFBL programs/sas.so
    ```
 
 3. **Run the demos:**

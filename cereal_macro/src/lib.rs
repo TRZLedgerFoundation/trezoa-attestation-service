@@ -3,7 +3,7 @@ use quote::quote;
 use syn::{parse_macro_input, DeriveInput};
 
 /// A convenient way to get the serialized representation
-/// of a struct for Solana Attestation Service. Adds a
+/// of a struct for Trezoa Attestation Service. Adds a
 /// `get_serialized_representation` function to the struct.
 #[proc_macro_derive(SchemaStructSerialize)]
 pub fn schema_struct_serialize(input: TokenStream) -> TokenStream {

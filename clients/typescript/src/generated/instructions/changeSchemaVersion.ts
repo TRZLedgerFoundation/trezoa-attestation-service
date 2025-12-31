@@ -38,8 +38,8 @@ import {
   type TransactionSigner,
   type WritableAccount,
   type WritableSignerAccount,
-} from '@solana/kit';
-import { SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS } from '../programs';
+} from '@trezoa/kit';
+import { TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS } from '../programs';
 import { getAccountMetaFactory, type ResolvedAccount } from '../shared';
 
 export const CHANGE_SCHEMA_VERSION_DISCRIMINATOR = 5;
@@ -49,7 +49,7 @@ export function getChangeSchemaVersionDiscriminatorBytes() {
 }
 
 export type ChangeSchemaVersionInstruction<
-  TProgram extends string = typeof SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
+  TProgram extends string = typeof TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
   TAccountPayer extends string | AccountMeta<string> = string,
   TAccountAuthority extends string | AccountMeta<string> = string,
   TAccountCredential extends string | AccountMeta<string> = string,
@@ -165,7 +165,7 @@ export function getChangeSchemaVersionInstruction<
   TAccountNewSchema extends string,
   TAccountSystemProgram extends string,
   TProgramAddress extends
-    Address = typeof SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
+    Address = typeof TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
 >(
   input: ChangeSchemaVersionInput<
     TAccountPayer,
@@ -187,7 +187,7 @@ export function getChangeSchemaVersionInstruction<
 > {
   // Program address.
   const programAddress =
-    config?.programAddress ?? SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS;
+    config?.programAddress ?? TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS;
 
   // Original accounts.
   const originalAccounts = {
@@ -238,7 +238,7 @@ export function getChangeSchemaVersionInstruction<
 }
 
 export type ParsedChangeSchemaVersionInstruction<
-  TProgram extends string = typeof SOLANA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
+  TProgram extends string = typeof TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
   TAccountMetas extends readonly AccountMeta[] = readonly AccountMeta[],
 > = {
   programAddress: Address<TProgram>;

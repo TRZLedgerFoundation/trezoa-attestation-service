@@ -11,39 +11,39 @@ import {
     sendAndConfirmTransactionFactory,
     createKeyPairFromBytes,
     type Address,
-    createSolanaRpc,
+    createTrezoaRpc,
     type Rpc,
-    type SolanaRpcApi,
-    createSolanaRpcSubscriptions,
+    type TrezoaRpcApi,
+    createTrezoaRpcSubscriptions,
     type RpcSubscriptions,
-    type SolanaRpcSubscriptionsApi,
+    type TrezoaRpcSubscriptionsApi,
     appendTransactionMessageInstruction,
     setTransactionMessageLifetimeUsingBlockhash,
     setTransactionMessageFeePayer,
     createTransactionMessage,
     pipe,
     getSignatureFromTransaction,
-  } from "@solana/kit";
-  import { createKeyPairSignerFromPrivateKeyBytes, signTransactionMessageWithSigners } from "@solana/signers";
+  } from "@trezoa/kit";
+  import { createKeyPairSignerFromPrivateKeyBytes, signTransactionMessageWithSigners } from "@trezoa/signers";
   import * as bs58 from "bs58";
 
   async function createAttestation() {
 
     type RpcClient = {
-      rpc: Rpc<SolanaRpcApi>;
-      rpcSubscriptions: RpcSubscriptions<SolanaRpcSubscriptionsApi>;
+      rpc: Rpc<TrezoaRpcApi>;
+      rpcSubscriptions: RpcSubscriptions<TrezoaRpcSubscriptionsApi>;
     };
   
   
-    const createDefaultSolanaClient = (): RpcClient => {
-      const rpc = createSolanaRpc(`https://${process.env.RPC_ROOT!}`);
-      const rpcSubscriptions = createSolanaRpcSubscriptions(`wss://${process.env.RPC_ROOT!}`);
+    const createDefaultTrezoaClient = (): RpcClient => {
+      const rpc = createTrezoaRpc(`https://${process.env.RPC_ROOT!}`);
+      const rpcSubscriptions = createTrezoaRpcSubscriptions(`wss://${process.env.RPC_ROOT!}`);
       return { rpc, rpcSubscriptions };
     };
   
-    const { rpc, rpcSubscriptions } = createDefaultSolanaClient();
+    const { rpc, rpcSubscriptions } = createDefaultTrezoaClient();
   
-    // Generate keypairs using @solana/kit
+    // Generate keypairs using @trezoa/kit
     const recipient = await createKeyPairSignerFromPrivateKeyBytes(bs58.default.decode(process.env.RECIPIENT_KEYPAIR!));
     const authority = await createKeyPairSignerFromPrivateKeyBytes(bs58.default.decode(process.env.AUTHORITY_KEYPAIR!));
     const operatorKey = await createKeyPairSignerFromPrivateKeyBytes(bs58.default.decode(process.env.OPERATOR_KEYPAIR!));
@@ -72,13 +72,13 @@ import {
       "fee_payer": "G1ajNiQqS962dujnPvzdbQs2aLLuTZ4RUrH4fD1YLn3g",
       "allowed_programs": [
           "11111111111111111111111111111111",
-          "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
-          "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+          "4JkrrPuuQPxDZuBW1bgrM1GBa8oYg1LxcuX9szBPh3ic",
+          "D5NoYKvb2MX3d8sgxopQ8ejaXDjMcu8YAG1A4d1zmTvv"
       ],
       "allowed_tokens": [
           "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU"
       ],
-      "allowed_spl_paid_tokens": [
+      "allowed_tpl_paid_tokens": [
           "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU"
       ],
       "max_signatures": 10,

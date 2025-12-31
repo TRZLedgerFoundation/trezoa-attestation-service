@@ -1,14 +1,14 @@
 use borsh::{BorshDeserialize, BorshSerialize};
 use helpers::program_test_context;
-use solana_attestation_service_client::instructions::{
+use trezoa_attestation_service_client::instructions::{
     CloseAttestationBuilder, CreateAttestationBuilder, CreateCredentialBuilder, CreateSchemaBuilder,
 };
-use solana_attestation_service_client::programs::SOLANA_ATTESTATION_SERVICE_ID;
-use solana_attestation_service_client::types::CloseAttestationEvent;
-use solana_attestation_service_macros::SchemaStructSerialize;
-use solana_program_test::ProgramTestContext;
-use solana_sdk::clock::Clock;
-use solana_sdk::{
+use trezoa_attestation_service_client::programs::TREZOA_ATTESTATION_SERVICE_ID;
+use trezoa_attestation_service_client::types::CloseAttestationEvent;
+use trezoa_attestation_service_macros::SchemaStructSerialize;
+use trezoa_program_test::ProgramTestContext;
+use trezoa_sdk::clock::Clock;
+use trezoa_sdk::{
     pubkey::Pubkey, signature::Keypair, signer::Signer, system_program, transaction::Transaction,
 };
 
@@ -41,7 +41,7 @@ async fn setup() -> TestFixtures {
             &authority.pubkey().to_bytes(),
             credential_name.as_bytes(),
         ],
-        &SOLANA_ATTESTATION_SERVICE_ID,
+        &TREZOA_ATTESTATION_SERVICE_ID,
     );
 
     let create_credential_ix = CreateCredentialBuilder::new()
@@ -65,7 +65,7 @@ async fn setup() -> TestFixtures {
             schema_name.as_bytes(),
             &[1],
         ],
-        &SOLANA_ATTESTATION_SERVICE_ID,
+        &TREZOA_ATTESTATION_SERVICE_ID,
     );
     let create_schema_ix = CreateSchemaBuilder::new()
         .payer(ctx.payer.pubkey())
@@ -126,7 +126,7 @@ async fn close_attestation_success() {
             &schema.to_bytes(),
             &nonce.to_bytes(),
         ],
-        &SOLANA_ATTESTATION_SERVICE_ID,
+        &TREZOA_ATTESTATION_SERVICE_ID,
     )
     .0;
     let create_attestation_ix = CreateAttestationBuilder::new()
@@ -153,7 +153,7 @@ async fn close_attestation_success() {
         .unwrap();
 
     let (event_auth_pda, _bump) =
-        Pubkey::find_program_address(&[b"__event_authority"], &SOLANA_ATTESTATION_SERVICE_ID);
+        Pubkey::find_program_address(&[b"__event_authority"], &TREZOA_ATTESTATION_SERVICE_ID);
 
     let initial_payer_lamports = ctx
         .banks_client
@@ -179,7 +179,7 @@ async fn close_attestation_success() {
         .event_authority(event_auth_pda)
         .system_program(system_program::ID)
         .attestation_program(
-            solana_attestation_service_client::programs::SOLANA_ATTESTATION_SERVICE_ID,
+            trezoa_attestation_service_client::programs::TREZOA_ATTESTATION_SERVICE_ID,
         )
         .instruction();
     let close_tx = Transaction::new_signed_with_payer(
@@ -209,7 +209,7 @@ async fn close_attestation_success() {
                 .instruction
                 .program_id(&close_tx.message.account_keys);
 
-            if program_id.eq(&SOLANA_ATTESTATION_SERVICE_ID) {
+            if program_id.eq(&TREZOA_ATTESTATION_SERVICE_ID) {
                 let data = inner_instr.instruction.data;
 
                 // Check ix discriminator matches emit_event.

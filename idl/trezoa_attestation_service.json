@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "name": "solana_attestation_service",
+  "name": "trezoa_attestation_service",
   "instructions": [
     {
       "name": "CreateCredential",
@@ -791,6 +791,6 @@
   ],
   "metadata": {
     "origin": "shank",
-    "address": "22zoJMtdu4tQc2PzL74ZUT7FrwgB1Udec8DdW4yw4BdG"
+    "address": "8AVGA5ygh9XXLYLdnZRc2M5oEPyRLx7zdfjR57XHuFBL"
   }
 }

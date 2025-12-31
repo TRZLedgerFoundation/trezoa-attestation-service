@@ -1,12 +1,12 @@
 use borsh::BorshDeserialize;
 use helpers::program_test_context;
-use solana_attestation_service_client::{
+use trezoa_attestation_service_client::{
     accounts::Schema,
     instructions::{ChangeSchemaVersionBuilder, CreateCredentialBuilder, CreateSchemaBuilder},
 };
-use solana_attestation_service_macros::SchemaStructSerialize;
-use solana_program_test::ProgramTestContext;
-use solana_sdk::{
+use trezoa_attestation_service_macros::SchemaStructSerialize;
+use trezoa_program_test::ProgramTestContext;
+use trezoa_sdk::{
     instruction::InstructionError, pubkey::Pubkey, signature::Keypair, signer::Signer, system_program, transaction::{Transaction, TransactionError}
 };
 mod helpers;
@@ -44,7 +44,7 @@ async fn setup() -> TestFixtures {
             &authority.pubkey().to_bytes(),
             credential_name.as_bytes(),
         ],
-        &Pubkey::from(solana_attestation_service_client::programs::SOLANA_ATTESTATION_SERVICE_ID),
+        &Pubkey::from(trezoa_attestation_service_client::programs::TREZOA_ATTESTATION_SERVICE_ID),
     );
 
     let create_credential_ix = CreateCredentialBuilder::new()
@@ -79,7 +79,7 @@ async fn setup() -> TestFixtures {
             schema_name.as_bytes(),
             &[1],
         ],
-        &Pubkey::from(solana_attestation_service_client::programs::SOLANA_ATTESTATION_SERVICE_ID),
+        &Pubkey::from(trezoa_attestation_service_client::programs::TREZOA_ATTESTATION_SERVICE_ID),
     );
     let create_schema_ix = CreateSchemaBuilder::new()
         .payer(ctx.payer.pubkey())
@@ -132,7 +132,7 @@ async fn change_schema_version_success() {
             schema_name.as_bytes(),
             &[2],
         ],
-        &Pubkey::from(solana_attestation_service_client::programs::SOLANA_ATTESTATION_SERVICE_ID),
+        &Pubkey::from(trezoa_attestation_service_client::programs::TREZOA_ATTESTATION_SERVICE_ID),
     );
     let schema_layout2 = TestData2::get_serialized_representation();
     let field_names2 = vec!["name".into(), "location".into(), "phone".into()];
@@ -197,7 +197,7 @@ async fn change_schema_version_fail_incorrect_credential() {
             &authority.pubkey().to_bytes(),
             credential_name.as_bytes(),
         ],
-        &Pubkey::from(solana_attestation_service_client::programs::SOLANA_ATTESTATION_SERVICE_ID),
+        &Pubkey::from(trezoa_attestation_service_client::programs::TREZOA_ATTESTATION_SERVICE_ID),
     );
 
     let create_credential_ix = CreateCredentialBuilder::new()
@@ -228,7 +228,7 @@ async fn change_schema_version_fail_incorrect_credential() {
             schema_name.as_bytes(),
             &[2],
         ],
-        &Pubkey::from(solana_attestation_service_client::programs::SOLANA_ATTESTATION_SERVICE_ID),
+        &Pubkey::from(trezoa_attestation_service_client::programs::TREZOA_ATTESTATION_SERVICE_ID),
     );
     let schema_layout2 = TestData2::get_serialized_representation();
     let field_names2 = vec!["name".into(), "location".into(), "phone".into()];

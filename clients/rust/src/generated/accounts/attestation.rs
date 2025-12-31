@@ -7,7 +7,7 @@
 
 use borsh::BorshDeserialize;
 use borsh::BorshSerialize;
-use solana_program::pubkey::Pubkey;
+use trezoa_program::pubkey::Pubkey;
 
 #[derive(BorshSerialize, BorshDeserialize, Clone, Debug, Eq, PartialEq)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
@@ -50,11 +50,11 @@ impl Attestation {
     }
 }
 
-impl<'a> TryFrom<&solana_program::account_info::AccountInfo<'a>> for Attestation {
+impl<'a> TryFrom<&trezoa_program::account_info::AccountInfo<'a>> for Attestation {
     type Error = std::io::Error;
 
     fn try_from(
-        account_info: &solana_program::account_info::AccountInfo<'a>,
+        account_info: &trezoa_program::account_info::AccountInfo<'a>,
     ) -> Result<Self, Self::Error> {
         let mut data: &[u8] = &(*account_info.data).borrow();
         Self::deserialize(&mut data)
@@ -63,8 +63,8 @@ impl<'a> TryFrom<&solana_program::account_info::AccountInfo<'a>> for Attestation
 
 #[cfg(feature = "fetch")]
 pub fn fetch_attestation(
-    rpc: &solana_client::rpc_client::RpcClient,
-    address: &solana_program::pubkey::Pubkey,
+    rpc: &trezoa_client::rpc_client::RpcClient,
+    address: &trezoa_program::pubkey::Pubkey,
 ) -> Result<crate::shared::DecodedAccount<Attestation>, std::io::Error> {
     let accounts = fetch_all_attestation(rpc, &[*address])?;
     Ok(accounts[0].clone())
@@ -72,8 +72,8 @@ pub fn fetch_attestation(
 
 #[cfg(feature = "fetch")]
 pub fn fetch_all_attestation(
-    rpc: &solana_client::rpc_client::RpcClient,
-    addresses: &[solana_program::pubkey::Pubkey],
+    rpc: &trezoa_client::rpc_client::RpcClient,
+    addresses: &[trezoa_program::pubkey::Pubkey],
 ) -> Result<Vec<crate::shared::DecodedAccount<Attestation>>, std::io::Error> {
     let accounts = rpc
         .get_multiple_accounts(addresses)
@@ -97,8 +97,8 @@ pub fn fetch_all_attestation(
 
 #[cfg(feature = "fetch")]
 pub fn fetch_maybe_attestation(
-    rpc: &solana_client::rpc_client::RpcClient,
-    address: &solana_program::pubkey::Pubkey,
+    rpc: &trezoa_client::rpc_client::RpcClient,
+    address: &trezoa_program::pubkey::Pubkey,
 ) -> Result<crate::shared::MaybeAccount<Attestation>, std::io::Error> {
     let accounts = fetch_all_maybe_attestation(rpc, &[*address])?;
     Ok(accounts[0].clone())
@@ -106,8 +106,8 @@ pub fn fetch_maybe_attestation(
 
 #[cfg(feature = "fetch")]
 pub fn fetch_all_maybe_attestation(
-    rpc: &solana_client::rpc_client::RpcClient,
-    addresses: &[solana_program::pubkey::Pubkey],
+    rpc: &trezoa_client::rpc_client::RpcClient,
+    addresses: &[trezoa_program::pubkey::Pubkey],
 ) -> Result<Vec<crate::shared::MaybeAccount<Attestation>>, std::io::Error> {
     let accounts = rpc
         .get_multiple_accounts(addresses)
@@ -131,27 +131,27 @@ pub fn fetch_all_maybe_attestation(
     Ok(decoded_accounts)
 }
 
-#[cfg(feature = "anchor")]
-impl anchor_lang::AccountDeserialize for Attestation {
-    fn try_deserialize_unchecked(buf: &mut &[u8]) -> anchor_lang::Result<Self> {
+#[cfg(feature = "trezoaanchor")]
+impl trezoaanchor_lang::AccountDeserialize for Attestation {
+    fn try_deserialize_unchecked(buf: &mut &[u8]) -> trezoaanchor_lang::Result<Self> {
         Ok(Self::deserialize(buf)?)
     }
 }
 
-#[cfg(feature = "anchor")]
-impl anchor_lang::AccountSerialize for Attestation {}
+#[cfg(feature = "trezoaanchor")]
+impl trezoaanchor_lang::AccountSerialize for Attestation {}
 
-#[cfg(feature = "anchor")]
-impl anchor_lang::Owner for Attestation {
+#[cfg(feature = "trezoaanchor")]
+impl trezoaanchor_lang::Owner for Attestation {
     fn owner() -> Pubkey {
-        crate::SOLANA_ATTESTATION_SERVICE_ID
+        crate::TREZOA_ATTESTATION_SERVICE_ID
     }
 }
 
-#[cfg(feature = "anchor-idl-build")]
-impl anchor_lang::IdlBuild for Attestation {}
+#[cfg(feature = "trezoaanchor-idl-build")]
+impl trezoaanchor_lang::IdlBuild for Attestation {}
 
-#[cfg(feature = "anchor-idl-build")]
-impl anchor_lang::Discriminator for Attestation {
+#[cfg(feature = "trezoaanchor-idl-build")]
+impl trezoaanchor_lang::Discriminator for Attestation {
     const DISCRIMINATOR: [u8; 8] = [0; 8];
 }

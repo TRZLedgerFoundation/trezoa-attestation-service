@@ -6,7 +6,7 @@ use pinocchio::{
     sysvars::{clock::Clock, rent::Rent, Sysvar},
     ProgramResult,
 };
-use solana_program::pubkey::Pubkey as SolanaPubkey;
+use trezoa_program::pubkey::Pubkey as TrezoaPubkey;
 
 use crate::{
     constants::ATTESTATION_SEED,
@@ -65,17 +65,17 @@ pub fn process_create_attestation(
         return Err(AttestationServiceError::InvalidAttestationData.into());
     }
 
-    // NOTE: this could be optimized further by removing the `solana-program` dependency
+    // NOTE: this could be optimized further by removing the `trezoa-program` dependency
     // and using `pubkey::checked_create_program_address` from Pinocchio to verify the
     // pubkey and associated bump (needed to be added as arg) is valid.
-    let (attestation_pda, attestation_bump) = SolanaPubkey::find_program_address(
+    let (attestation_pda, attestation_bump) = TrezoaPubkey::find_program_address(
         &[
             ATTESTATION_SEED,
             credential_info.key(),
             schema_info.key(),
             &args.nonce,
         ],
-        &SolanaPubkey::from(*program_id),
+        &TrezoaPubkey::from(*program_id),
     );
 
     // Validate attestation PDA is correct
