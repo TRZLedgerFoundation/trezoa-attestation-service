@@ -8,18 +8,18 @@ importers:
 
   .:
     dependencies:
-      '@codama/nodes-from-trezoaanchor':
-        specifier: ^1.3.0
-        version: 1.3.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       '@codama/renderers':
         specifier: ^1.0.23
         version: 1.0.23(chokidar@3.6.0)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       '@codama/renderers-js':
         specifier: ^1.5.0
         version: 1.5.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@codoma/nodes-from-trezoaanchor':
+        specifier: ^1.3.8
+        version: 1.3.8(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       '@trezoa/kit':
-        specifier: ^2.1.1
-        version: 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.2)
+        specifier: ^5.1.0
+        version: 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.2)
       codama:
         specifier: ^1.4.0
         version: 1.4.0
@@ -57,20 +57,27 @@ packages:
     resolution: {integrity: sha512-w0WUrFJhIZUoYuyMTX1ls+qYaU6e3hrTzyeu/KS818wYY50HvdyLxLXhDAhHR/CF9MdNz6XyZpKAMOZDPmxqOw==}
     hasBin: true
 
+  '@codama/errors@1.5.0':
+    resolution: {integrity: sha512-i4cS+S7JaZXhofQHFY3cwzt8rqxUVPNaeJND5VOyKUbtcOi933YXJXk52gDG4mc+CpGqHJijsJjfSpr1lJGxzg==}
+    hasBin: true
+
   '@codama/node-types@1.3.0':
     resolution: {integrity: sha512-3dPbMXR/QgKUqXMMxc6PUi2f8Dq6eZ9P/v6+ChTQFLGhSQmqC1PsCbL77PuM7mf4IK9np1RXFqbC/EVpgLvbgA==}
 
   '@codama/node-types@1.4.0':
     resolution: {integrity: sha512-h5yNdI6CmSWwjyVQ03b15faI6xC35ytqOzTQQ09uA6GUnsQyESce3nZGbrwGy9Gape12JfFdmsxziVtLB0Ldkg==}
 
-  '@codama/nodes-from-trezoaanchor@1.3.0':
-    resolution: {integrity: sha512-CgHXC4cdhQGectfA3Me5nc1uBQF81p0Wu+ibuGuVDXdU55sbExUaGVkMLO1znnLvV5EutAoDzV1rhnDuhEyWcA==}
+  '@codama/node-types@1.5.0':
+    resolution: {integrity: sha512-Ebz2vOUukmNaFXWdkni1ZihXkAIUnPYtqIMXYxKXOxjMP+TGz2q0lGtRo7sqw1pc2ksFBIkfBp5pZsl5p6gwXA==}
 
   '@codama/nodes@1.3.0':
     resolution: {integrity: sha512-Spf+Whm4jBLFxGPtJuDGmteGe+avoIDnh6rsByU1iJlYmcJJLjZayexFkvW8+1IeDclUMPQYBSj6SjuQEItLqQ==}
 
   '@codama/nodes@1.4.0':
     resolution: {integrity: sha512-4v51bD/awhDqKzKjTOf84f4wzkLrs4WodU0HNT33BcsP+gcbC+z+HSHBqVaDofjHpbkP8YlMP+4SRqU8utff8A==}
+
+  '@codama/nodes@1.5.0':
+    resolution: {integrity: sha512-yg+xmorWiMNjS3n19CGIt/FZ/ZCuDIu+HEY45bq6gHu1MN3RtJZY+Q3v0ErnBPA60D8mNWkvkKoeSZXfzcAvfw==}
 
   '@codama/renderers-core@1.0.16':
     resolution: {integrity: sha512-IJshH6JsX7GUaYmC6KlOd5pLLyW1Yqd0I8B0pVWvvv9BfPNosC4t4RfusHSkYQePkIvs7CJ7YlwUywwW36Vt8A==}
@@ -106,8 +113,17 @@ packages:
   '@codama/visitors-core@1.4.0':
     resolution: {integrity: sha512-971xAqXuBbfGLB5DUNIB2X66MEWE+NF22blkNgoXgOCm1XfKr50MTkvF1nYiFxa4+09AS621rybppqQRmOqPsw==}
 
+  '@codama/visitors-core@1.5.0':
+    resolution: {integrity: sha512-3PIAlBX0a06hIxzyPtQMfQcqWGFBgfbwysSwcXBbvHUYbemwhD6xwlBKJuqTwm9DyFj3faStp5fpvcp03Rjxtw==}
+
   '@codama/visitors@1.4.0':
     resolution: {integrity: sha512-KM/dWSV7a/zet7blGtiyMQHIUmFmJDtbAFY9ISRmaSuCJ9RsfoF4RyjjKjY1ON5GVsG25bGUdXdnqXd1JTFM7g==}
+
+  '@codama/visitors@1.5.0':
+    resolution: {integrity: sha512-SwtQaleXxAaFz6uHygxki621q4nPUDQlnwEhsg+QKOjHpKWXjLYdJof+R8gUiTV/n7/IeNnjvxJTTNfUsvETPQ==}
+
+  '@codoma/nodes-from-trezoaanchor@1.3.8':
+    resolution: {integrity: sha512-GTwnYUuQMLjPKDJ/0l6YYdIIjD6+NuIwuXL0mjG3oRAV+qETOQ5uFGF5o5PGHRUU+qhyfQeeoMNJxCQ2hnnmsA==}
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -127,291 +143,511 @@ packages:
     resolution: {integrity: sha512-XlOlEbQcE9fmuXxrVTXCTlG2nlRXa9Rj3rr5Ue/+tX+nmkgbX720YHh0VR3hBF9xDvwnb8D2shVGOwNx+ulArw==}
     engines: {node: '>= 20.19.0'}
 
-  '@trezoa/accounts@2.1.1':
-    resolution: {integrity: sha512-Q9mG0o/6oyiUSw1CXCkG50TWlYiODJr3ZilEDLIyXpYJzOstRZM4XOzbRACveX4PXFoufPzpR1sSVK6qfcUUCw==}
-    engines: {node: '>=20.18.0'}
-    peerDependencies:
-      typescript: '>=5.3.3'
-
-  '@trezoa/addresses@2.1.1':
-    resolution: {integrity: sha512-yX6+brBXFmirxXDJCBDNKDYbGZHMZHaZS4NJWZs31DTe5To3Ky3Y9g3wFEGAX242kfNyJcgg5OeoBuZ7vdFycQ==}
-    engines: {node: '>=20.18.0'}
-    peerDependencies:
-      typescript: '>=5.3.3'
-
-  '@trezoa/assertions@2.1.1':
-    resolution: {integrity: sha512-ln6dXkliyb9ybqLGFf5Gn+LJaPZGmer9KloIFfHiiSfYFdoAqOu6+pVY+323SKWXHG+hHl9VkwuZYpSp02OroA==}
-    engines: {node: '>=20.18.0'}
-    peerDependencies:
-      typescript: '>=5.3.3'
-
-  '@trezoa/codecs-core@2.0.0-rc.4':
+  '@solana/codecs-core@2.0.0-rc.4':
     resolution: {integrity: sha512-JIrTSps032mSE3wBxW3bXOqWfoy4CMy1CX/XeVCijyh5kLVxZTSDIdRTYdePdL1yzaOZF1Xysvt1DhOUgBdM+A==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5'
 
-  '@trezoa/codecs-core@2.1.1':
-    resolution: {integrity: sha512-iPQW3UZ2Vi7QFBo2r9tw0NubtH8EdrhhmZulx6lC8V5a+qjaxovtM/q/UW2BTNpqqHLfO0tIcLyBLrNH4HTWPg==}
+  '@solana/codecs-core@2.3.0':
+    resolution: {integrity: sha512-oG+VZzN6YhBHIoSKgS5ESM9VIGzhWjEHEGNPSibiDTxFhsFWxNaz8LbMDPjBUE69r9wmdGLkrQ+wVPbnJcZPvw==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/codecs-core@5.0.0':
-    resolution: {integrity: sha512-rCG2d8OaamVF2/J//YyCgDqNJpUytVVltw9C8mJtEz5c6Se/LR6BFuG8g4xeJswq/ab4RFk5/HFdgbvNjKgQjA==}
+  '@solana/codecs-core@5.1.0':
+    resolution: {integrity: sha512-vDwi03mxWeWCS5Il6BCdNdifYdOoHVz97YOmbWGIt45b77Ivu5NUYeSD2+ccl6fSw8eYQ6QaqqKXMjbSfsXv4g==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/codecs-data-structures@2.1.1':
-    resolution: {integrity: sha512-OcR7FIhWDFqg6gEslbs2GVKeDstGcSDpkZo9SeV4bm2RLd1EZfxGhWW+yHZfHqOZiIkw9w+aY45bFgKrsLQmFw==}
-    engines: {node: '>=20.18.0'}
-    peerDependencies:
-      typescript: '>=5.3.3'
-
-  '@trezoa/codecs-data-structures@5.0.0':
-    resolution: {integrity: sha512-y503Pqmv0LHcfcf0vQJGaxDvydQJbyCo8nK3nxn56EhFj5lBQ1NWb3WvTd83epigwuZurW2MhJARrpikfhQglQ==}
-    engines: {node: '>=20.18.0'}
-    peerDependencies:
-      typescript: '>=5.3.3'
-
-  '@trezoa/codecs-numbers@2.0.0-rc.4':
+  '@solana/codecs-numbers@2.0.0-rc.4':
     resolution: {integrity: sha512-ZJR7TaUO65+3Hzo3YOOUCS0wlzh17IW+j0MZC2LCk1R0woaypRpHKj4iSMYeQOZkMxsd9QT3WNvjFrPC2qA6Sw==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5'
 
-  '@trezoa/codecs-numbers@2.1.1':
-    resolution: {integrity: sha512-m20IUPJhPUmPkHSlZ2iMAjJ7PaYUvlMtFhCQYzm9BEBSI6OCvXTG3GAPpAnSGRBfg5y+QNqqmKn4QHU3B6zzCQ==}
+  '@solana/codecs-numbers@2.3.0':
+    resolution: {integrity: sha512-jFvvwKJKffvG7Iz9dmN51OGB7JBcy2CJ6Xf3NqD/VP90xak66m/Lg48T01u5IQ/hc15mChVHiBm+HHuOFDUrQg==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/codecs-numbers@5.0.0':
-    resolution: {integrity: sha512-a2+skRLuUK02f/XFe4L0e1+wHCyfK25PkyseFps1v1l4pvevukFwth/EhSyrs6w5CsTJRVoR7MuE3E00PM4egw==}
+  '@solana/codecs-numbers@5.1.0':
+    resolution: {integrity: sha512-Ea5/9yjDNOrDZcI40UGzzi6Aq1JNsmzM4m5pOk6Xb3JRZ0YdKOv/MwuCqb6jRgzZ7SQjHhkfGL43kHLJA++bOw==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/codecs-strings@2.0.0-rc.4':
+  '@solana/codecs-strings@2.0.0-rc.4':
     resolution: {integrity: sha512-LGfK2RL0BKjYYUfzu2FG/gTgCsYOMz9FKVs2ntji6WneZygPxJTV5W98K3J8Rl0JewpCSCFQH3xjLSHBJUS0fA==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       fastestsmallesttextencoderdecoder: ^1.0.22
       typescript: '>=5'
 
-  '@trezoa/codecs-strings@2.1.1':
-    resolution: {integrity: sha512-uhj+A7eT6IJn4nuoX8jDdvZa7pjyZyN+k64EZ8+aUtJGt5Ft4NjRM8Jl5LljwYBWKQCgouVuigZHtTO2yAWExA==}
+  '@solana/codecs-strings@2.3.0':
+    resolution: {integrity: sha512-y5pSBYwzVziXu521hh+VxqUtp0hYGTl1eWGoc1W+8mdvBdC1kTqm/X7aYQw33J42hw03JjryvYOvmGgk3Qz/Ug==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       fastestsmallesttextencoderdecoder: ^1.0.22
       typescript: '>=5.3.3'
 
-  '@trezoa/codecs-strings@5.0.0':
-    resolution: {integrity: sha512-ALkRwpV8bGR6qjAYw0YXZwp2YI4wzvKOJGmx04Ut8gMdbaUx7qOcJkhEQKI6ZVC3lAWSIS1N1wGccUZDwvfKxw==}
+  '@solana/codecs-strings@5.1.0':
+    resolution: {integrity: sha512-014xwl5T/3VnGW0gceizF47DUs5EURRtgGmbWIR5+Z32yxgQ6hT9Zl0atZbL268RHbUQ03/J8Ush1StQgy7sfQ==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       fastestsmallesttextencoderdecoder: ^1.0.22
       typescript: '>=5.3.3'
+    peerDependenciesMeta:
+      fastestsmallesttextencoderdecoder:
+        optional: true
 
-  '@trezoa/codecs@2.1.1':
-    resolution: {integrity: sha512-89Fv22fZ5dNiXjOKh6I3U1D/lVO/dF/cPHexdiqjS5k5R5uKeK3506rhcnc4ciawQAoOkDwHzW+HitUumF2PJg==}
-    engines: {node: '>=20.18.0'}
-    peerDependencies:
-      typescript: '>=5.3.3'
-
-  '@trezoa/codecs@5.0.0':
-    resolution: {integrity: sha512-KOw0gFUSBxIMDWLJ3AkVFkEci91dw0Rpx3C6y83Our7fSW+SEP8vRZklCElieYR85LHVB1QIEhoeHR7rc+Ifkw==}
-    engines: {node: '>=20.18.0'}
-    peerDependencies:
-      typescript: '>=5.3.3'
-
-  '@trezoa/errors@2.0.0-rc.4':
+  '@solana/errors@2.0.0-rc.4':
     resolution: {integrity: sha512-0PPaMyB81keEHG/1pnyEuiBVKctbXO641M2w3CIOrYT/wzjunfF0FTxsqq9wYJeYo0AyiefCKGgSPs6wiY2PpQ==}
     engines: {node: '>=20.18.0'}
     hasBin: true
     peerDependencies:
       typescript: '>=5'
 
-  '@trezoa/errors@2.1.1':
-    resolution: {integrity: sha512-sj6DaWNbSJFvLzT8UZoabMefQUfSW/8tXK7NTiagsDmh+Q87eyQDDC9L3z+mNmx9b6dEf6z660MOIplDD2nfEw==}
+  '@solana/errors@2.3.0':
+    resolution: {integrity: sha512-66RI9MAbwYV0UtP7kGcTBVLxJgUxoZGm8Fbc0ah+lGiAw17Gugco6+9GrJCV83VyF2mDWyYnYM9qdI3yjgpnaQ==}
     engines: {node: '>=20.18.0'}
     hasBin: true
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@solana/errors@5.1.0':
+    resolution: {integrity: sha512-JlTyekErWa6Fdcwu1Hrh+jZxjM4YxyorGCFDRVZlmHZFkp5N00DWKcYnSGZrTF8E6ZZEP9pfS2XwM8y7p7HPww==}
+    engines: {node: '>=20.18.0'}
+    hasBin: true
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/accounts@5.0.0':
+    resolution: {integrity: sha512-sV5E4/MsPz9TBrC1RrSi7Hs1sd42hr7ja1K1b7LmSzAVvfS4ivYs5312GLGkTSyFKlIaV3BtQCx/YhuPLBq/7w==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/accounts@5.1.0':
+    resolution: {integrity: sha512-gkGO7W8cVZbCRoSI1c9l7cfysSmyUak+ZF4vWFLvv+JtN9ItmNiS6IUOaXxr89O63h2Wt2VmgGXVFWZvxlVtjg==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/addresses@5.0.0':
+    resolution: {integrity: sha512-ebn7EylIfPvCbLowMqdjGbK355gMOuKZ0w2PzleJn+vmWartquNErQyZz7F/iWeN2dxlYmeh4djI4hhNbsHtKg==}
+    engines: {node: '>=20.18.0'}
+    deprecated: Versión obsoleta. Por favor actualiza a 5.1.0 o superior para obtener las últimas mejoras y correcciones.
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/addresses@5.1.0':
+    resolution: {integrity: sha512-kxZmiG6wXe8BcScGTXitH8EDS/eT0beR81SFyQ6ru/alo4SOkLnjLzF7iP9WjrCGpQP3J04EO0B/r1ko4ZP7bQ==}
+    engines: {node: '>=20.18.0'}
+    deprecated: This version has been replaced. Please use version 5.1.1 or higher.
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/assertions@5.0.0':
+    resolution: {integrity: sha512-+/DWhRhzYLfib0k0ejaMu63lMO/ENGOD3xI1BX9f9V8hNWjfk9oIT+VEqygh//HYcX2rrWSRrFYh3DFUwP4LTw==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/assertions@5.1.0':
+    resolution: {integrity: sha512-ExmU4IrT9lV71QVBfFvZY7KW2Vsd6lz/MyYACpUWAjgrCXt5FQ3uOjXxIU9a/dXL68VoEBJgwUkzBwf9mg57RA==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/codecs-core@5.0.0':
+    resolution: {integrity: sha512-WIUguUqUK5uG4dQlYsy01e96t5PYBiXYQySoS7+FzB8Mldmn1bbugBgQmPv6s2Xm/WlNvIUcsBl1JQz9PwpLjQ==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/codecs-core@5.1.0':
+    resolution: {integrity: sha512-np4aky3dQaMyNb1cBA5pz9iThNa0r8RhwPeP1vAiud+S6P4pGqtALxl/kYk+U849ayveTagl5liNvyJg0eVgAg==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/codecs-data-structures@5.0.0':
+    resolution: {integrity: sha512-bYP9OJ9zb2UjsByi+OVXFSKbxw5/3HmZm45hLU6ndrDXdQ2iT0QnycRsmzf0eDpKoM1Sya0c65c3H/fpDvI3Wg==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/codecs-data-structures@5.1.0':
+    resolution: {integrity: sha512-8HJRSN89CQNGraC3DFJ3MxO5sQHWu3aIiucXPtnfn7N2ocdhNSQmWt8mBqRO+P/rtgVXRvqq1tCD96uK9QEurQ==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/codecs-numbers@2.1.1':
+    resolution: {integrity: sha512-1NiUSmN8b4/jxNHhSQEMW+99c8fqKaEy7SwNs8WA1Zy3953OTrjNea5rN6jnOdcch++XFGvtQVz4SOg2f9GwZA==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5'
+
+  '@trezoa/codecs-numbers@5.1.0':
+    resolution: {integrity: sha512-Dwb06aPXSaMlL09tmynBW/LACxa4KBqa1mKXCgdsuI7C1fogxQK62C1iFVaa3bC2pGIO8T4Wm3Z8Y7W9accVvw==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/codecs-strings@5.0.0':
+    resolution: {integrity: sha512-WsaqwQ01K21DReCjYf2xeilY54NuFbvilBDDUIvT9exL9HZXRfbRlS/eqerlB8kvJGcloaZe3MYEKiXWoZr8fw==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      fastestsmallesttextencoderdecoder: ^1.0.22
+      typescript: '>=5.3.3'
+
+  '@trezoa/codecs-strings@5.1.0':
+    resolution: {integrity: sha512-k4wKp3kWu8I53LM/S2VRuvvSSz5/1t0KV0HWY5Hx4tlCFt4EELihgpUcGh1wpHPOosTlWS0hgzba6z9Zp2GWRg==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      fastestsmallesttextencoderdecoder: ^1.0.22
+      typescript: '>=5.3.3'
+    peerDependenciesMeta:
+      fastestsmallesttextencoderdecoder:
+        optional: true
+
+  '@trezoa/codecs@5.0.0':
+    resolution: {integrity: sha512-lMg0e3oxVvBmtXNGDysS0OZILkGgIkfjJFSKvjlLfAod2eKhUD3E7ZuCxp/8vLfpAGY8+mMeozfym9M8gNpMNg==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/codecs@5.1.0':
+    resolution: {integrity: sha512-Q7iQgNLQrHrdQdplxYcD97l8S/V4e53xCLZ4YAlF+ZXUMoVVu8y4ajpvd65mSjjPULy9eE11XUXmuQ7hWlHwQw==}
+    engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
   '@trezoa/errors@5.0.0':
-    resolution: {integrity: sha512-gTuhzO6E+ydfAAzqmqdPcvFyJwAzFKKIrqtnZPpgAuomcPYu+HSo0tuwSM/cTX0djmHt+GoOsf/julph+nvs2w==}
+    resolution: {integrity: sha512-5Y3LuCYWO9cFLRfpjhLubA/0CfBC2BIIpJ8ItwEtx5WBPHc2EvIRqZ98sFDEK0kKrewlCA71pspX3cSqjsLa+w==}
     engines: {node: '>=20.18.0'}
     hasBin: true
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/fast-stable-stringify@2.1.1':
-    resolution: {integrity: sha512-+gyW8plyMOURMuO9iL6eQBb5wCRwMGLO5T6jBIDGws8KR4tOtIBlQnQnzk81nNepE6lbf8tLCxS8KdYgT/P+wQ==}
+  '@trezoa/errors@5.1.0':
+    resolution: {integrity: sha512-OR1OSCR3HuAaP+cIZ5EcAquF2vdQTpOg+Vt7LTpwpcdEDDQ50sRFPQvusnxQXP+/jf6YysppDGrE7cANOo2+kw==}
+    engines: {node: '>=20.18.0'}
+    hasBin: true
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/fast-stable-stringify@5.0.0':
+    resolution: {integrity: sha512-/3nI7LGafTmTL4Bo9JHl/ffH+TCgJwIvIE2dOGzSPqqHo1nwxl3U4n8lK+9I+SVfSAWBZc3kGCe4+wGtxKCzRw==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/functional@2.1.1':
-    resolution: {integrity: sha512-HePJ49Cyz4Mb26zm5holPikm8bzsBH5zLR41+gIw9jJBmIteILNnk2OO1dVkb6aJnP42mdhWSXCo3VVEGT6aEw==}
+  '@trezoa/fast-stable-stringify@5.1.0':
+    resolution: {integrity: sha512-w2+8y9FnCZVAHF5lmhRKXur/5cdUPCuXENkP3mGzY/QD78tduxNKMGZUuujdHXF1EDewIXymJ9pz5ZlJUgsXdQ==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/instructions@2.1.1':
-    resolution: {integrity: sha512-Zx48hav9Lu+JuC+U0QJ8B7g7bXQZElXCjvxosIibU2C7ygDuq0ffOly0/irWJv2xmHYm6z8Hm1ILbZ5w0GhDQQ==}
+  '@trezoa/functional@5.0.0':
+    resolution: {integrity: sha512-Cs57D7jnlBhyijAUFKRdRHw3u5t/FqoaqxJSCgY10jgq5b80qLV5RKr/yOnThjgt60gZwwTmFsPgKTnVMKtF7g==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/keys@2.1.1':
-    resolution: {integrity: sha512-SXuhUz1c2mVnPnB+9Z9Yw6HPluIZbMlSByr+vPFLgaPYM356bRcNnu1pa28tONiQzRBFvl9qL08SL0OaYsmqPg==}
+  '@trezoa/functional@5.1.0':
+    resolution: {integrity: sha512-PI1ojG83QNhSFM4MICLlTbphd5wO2FPM6eCyQ4//nIztvG0b+zLF9kbHDJoWHNzO5MXvhZHePsCu/T1QF+c42A==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/kit@2.1.1':
-    resolution: {integrity: sha512-vV0otDSO9HFWIkAv7lxfeR7W6ruS/kqFYzTeRI+EuaZCgKdueavZnx9ydbpMCXis3BZ4Ao+k/ebzVWXMVvz+Lw==}
+  '@trezoa/instruction-plans@5.1.0':
+    resolution: {integrity: sha512-IPOUHs3+h9W0fXUs1NVS/rz47WYrBbguty2t0SaQjQGq/pe2+HkAGq/DW1rqTAO5D9GzFEAdU+OAfoi4N+IVVA==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/nominal-types@2.1.1':
-    resolution: {integrity: sha512-EpdDhuoATsm9bmuduv6yoNm1EKCz2tlq13nAazaVyQvkMBHhVelyT/zq0ruUplQZbl7qyYr5hG7p1SfGgQbgSQ==}
+  '@trezoa/instructions@5.0.0':
+    resolution: {integrity: sha512-Uau7WZaYsEEyFP3Vtzl7tB9EQXrlSAh5iQ4ccgYzjnS7PJyLgzpDEggoYIgdXqGaeoqG+R2DhlZX/Z26jWK5Lg==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/options@2.1.1':
-    resolution: {integrity: sha512-rnEExUGVOAV79kiFUEl/51gmSbBYxlcuw2VPnbAV/q53mIHoTgCwDD576N9A8wFftxaJHQFBdNuKiRrnU/fFHA==}
+  '@trezoa/instructions@5.1.0':
+    resolution: {integrity: sha512-FbHExjcF9sZDlX8CN18o1SQbmFlwLsg6C9xwB6rTV/tcy4df0MvqhUu0rxc99bTaQaNv05pIgiBv4XoImdGTDA==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/keys@5.0.0':
+    resolution: {integrity: sha512-HHOkqijD1BABJ2EnMOWb0w6XjMcj4wrhfTxipo4KgjPEogmjZzVlSpfn62J2gXWqVi33S4Rsn9LwYEn2SkE2ww==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/keys@5.1.0':
+    resolution: {integrity: sha512-0L0Fw8t45BIFIRi84IxvpV200wHhHafH+QsqGxDrnNxVbg/II2EA6JqJ1C0KC/jPGikvOdNqsRWRdUw54c/ckw==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/kit@5.1.0':
+    resolution: {integrity: sha512-kW4NsVShFte2fD0rvq5ljRsDFxGOQusYgzv8CVag72RjEPT32S/uIld7Ngfm49uxkMeRkKFK1J32GTyqEDSdww==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/nominal-types@5.0.0':
+    resolution: {integrity: sha512-tO1f3uyNvM2q9c3yLsnoEOuRMzOeQDDnIlpWrYN+XkxGmKKjM7DZFwWFCmPy1b2JuHOCySYcIWdFuNvheALuKw==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/nominal-types@5.1.0':
+    resolution: {integrity: sha512-0la305QEL1Y6kU2kLsJLlWfUAUZZ4MbPKYzb07tz8Ag+20V4xvPma1CpR/N0wE70ttWJWIKyoZWO4Ek33PL6jg==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/offchain-messages@5.1.0':
+    resolution: {integrity: sha512-oFGUPQTxJVlqJejSeunEl2FCbwuABbVaAzEpqsfkzCd7dDBfJ7cCTY0a30z7LzRrzoyPGsjtyg4+Hkety/bCyg==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
   '@trezoa/options@5.0.0':
-    resolution: {integrity: sha512-ezHVBFb9FXVSn8LUVRD2tLb6fejU0x8KtGEYyCYh0J0pQuXSITV0IQCjcEopvu/ZxWdXOJyzjvmymnhz90on5A==}
+    resolution: {integrity: sha512-M25ptfHAmObOcrmt+eSAcd/2Tu+S13d6Cwmer+4W1+znF1fDgXExgw4Xtd9TFYhjpVny8C7cMBLE4Xg38GQbPA==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/programs@2.1.1':
-    resolution: {integrity: sha512-fVOA4SEijrIrpG7GoBWhid43w3pT7RTfmMYciVKMb17s2GcnLLcTDOahPf0mlIctLtbF8PgImtzUkXQyuFGr8Q==}
+  '@trezoa/options@5.1.0':
+    resolution: {integrity: sha512-p912GW6NiZpnuIESFbwR2aDG4d3p8U9z70yE4fvoEvXN1RwKEVFkNt80Xtx+DuD+NayeI3LIbQHbZq+NHJa4gA==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/promises@2.1.1':
-    resolution: {integrity: sha512-8M+QBgJAQD0nhHzaezwwHH4WWfJEBPiiPAjMNBbbbTHA8+oYFIGgY1HwDUePK8nrT1Q1dX3gC+epBCqBi/nnGg==}
+  '@trezoa/programs@5.1.0':
+    resolution: {integrity: sha512-zO01n0+cg/hjVkd73U8+8A1C87eHsyLe+Fg8qC4GaDlkyM3byUDkOSnCR7vNVuES/f9ifdXL7efM98YC0rO2XQ==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/rpc-api@2.1.1':
-    resolution: {integrity: sha512-MTBuoRA9HtxW+CRpj1Ls5XVhDe00g8mW2Ib4/0k6ThFS0+cmjf+O78d8hgjQMqTtuzzSLZ4355+C7XEAuzSQ4g==}
+  '@trezoa/promises@5.0.0':
+    resolution: {integrity: sha512-bjSZ3mjUt2rlK2SQXgNovYC6VUWIexlFYNGIMkwbaODEMQlsOiIvH/0Y/4m9+Mazj9CHQWIoGhaOombXl+sqaQ==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/rpc-parsed-types@2.1.1':
-    resolution: {integrity: sha512-+n1IWYYglevvNE1neMiLOH6W67EzmWj8GaRlwGxcyu6MwSc/8x1bd2hnEkgK6md+ObPOxoOBdxQXIY/xnZgLcw==}
+  '@trezoa/promises@5.1.0':
+    resolution: {integrity: sha512-A/F1OVI+oA5ExIK7iwC/SkwhwocjRs0uZpb/Mf+94dT0Kp5JK74QrBvc7KRVIFUQXoQVnj9q/xZikFvgil3I9A==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/rpc-spec-types@2.1.1':
-    resolution: {integrity: sha512-3/G/MTi/c70TVZcB0DJjh5AGV7xqOYrjrpnIg+rLZuH65qHMimWiTHj0k8lxTzRMrN06Ed0+Q7SCw9hO/grTHA==}
+  '@trezoa/rpc-api@5.0.0':
+    resolution: {integrity: sha512-sF9o0BqXZlfJxoAkZESVn2UKQmwKd+Blsd0/08VMMAvJR0gzh+Vh5xLvT+2JdsIy0fV8jD05IUpBVFYTbtVzrw==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/rpc-spec@2.1.1':
-    resolution: {integrity: sha512-3Hd21XpaKtW3tG0oXAUlc1k0hX7/eqHpf8Gg744sr9G3ib5gT7EopcZRsH5LdESgS0nbv/c75TznCXjaUyRi+g==}
+  '@trezoa/rpc-api@5.1.0':
+    resolution: {integrity: sha512-ufLg/Veve2kO2UBJCEZq0QwXWHzaBm0nSzLe/GsRp2oRhKmUAeBluKYm35tROLoclbwP6Q9QovWcHoJmyThvrw==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/rpc-subscriptions-api@2.1.1':
-    resolution: {integrity: sha512-b4JuVScYGaEgO3jszYf7LqXdJK4GoUIevXcyQWq4Zk+R7P41VxGQWa2kzdPX9LIi+UGBmCThdRBfgOYyyHRKDg==}
+  '@trezoa/rpc-parsed-types@5.0.0':
+    resolution: {integrity: sha512-e+WGksy5eYZrZx3Q+/TsRbswXRIoVIYCyOWEfhSbUBnGhQOCbTtx6uTZKXTfn/f6QLr8RFa6C0gnhCRKWB1qdA==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/rpc-subscriptions-channel-websocket@2.1.1':
-    resolution: {integrity: sha512-xEDnMXnwMtKDEpzmIXTkxxvLqGsxqlKILmyfGsQOMJ9RHYkHmz/8MarHcjnYhyZ5lrs2irN/wExUNlSZTegSEw==}
+  '@trezoa/rpc-parsed-types@5.1.0':
+    resolution: {integrity: sha512-HLXCNCXsG9w+Rak4ExAXZtRZU8B5o0mUkySWSQh4qW2k312g1gWGzNw8Jl/QEPRQWLoQ2en8T+ufG1DGzf4JjQ==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/rpc-spec-types@5.0.0':
+    resolution: {integrity: sha512-W8IWGpibt/BA33Ljf7gmQqlwIF3GjaoVYp1l8Nsy05kJdm7hKyqRoPtEPH6y11qgjoJF9PI6dcqbHBgKa6tWnA==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/rpc-spec-types@5.1.0':
+    resolution: {integrity: sha512-4sd/hHQWu18ZHsySRKjUXwbc5nsCVyc1d7dP1yG1/5axh8tUobURbczTIouJc0Ae6sA5sKCSEbmBOUz8pvgmkw==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/rpc-spec@5.0.0':
+    resolution: {integrity: sha512-cCOhRPT85u81nHEGcpYIb42T3rxsZGzYqBlMeZy0UL7iqRd1giSTmFrNXQ4lTUDiN5FoGGgtKqiJDnX4u4BrRg==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/rpc-spec@5.1.0':
+    resolution: {integrity: sha512-7/9iXTHi+bxVxHEq4RL8t9nnp03OrfsZsrQXBJm50RagZMmUMvjHLIBy09LTmN39EOxDeAxCciAT3h0P68PT1w==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/rpc-subscriptions-api@5.0.0':
+    resolution: {integrity: sha512-WrDORQI19JK2dino18Xd/bRlGa/pxb4abQwRIKPxgFwX2qiZJoIJU7s3U1iu7zb4gyTZrjtJxVCo1DV6YXUlnQ==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/rpc-subscriptions-api@5.1.0':
+    resolution: {integrity: sha512-kldcU9sBGR5ht3zhUMbGs40MY/UalfcSoqlvt8+agdkQDbcuTGqlQdOhIPo3v2D5QxLr17XuqhBEgoJiXllXdw==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/rpc-subscriptions-channel-websocket@5.0.0':
+    resolution: {integrity: sha512-O0VPS7EpzDGPDEnxYQapc7iN8Ke3ucg5piUMEqh1cXS2S2AuPYZa31/otPRdVaodrH35qdxRJ37wmfXo4RUEbQ==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
       ws: ^8.18.0
 
-  '@trezoa/rpc-subscriptions-spec@2.1.1':
-    resolution: {integrity: sha512-ANT5Tub/ZqqewRtklz02km8iCUe0qwBGi3wsKTgiX7kRx3izHn6IHl90w1Y19wPd692mfZW8+Pk5PUrMSXhR3g==}
+  '@trezoa/rpc-subscriptions-channel-websocket@5.1.0':
+    resolution: {integrity: sha512-LXx0ciXCCWaQ5JsnRbVIh44HcqA7nSGDjLCV+7drS5oUaT/x+CXxo3m/AgJzCRiRnzc5a4TtJ/1V04zmKAW8tQ==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+      ws: ^8.18.0
+    peerDependenciesMeta:
+      ws:
+        optional: true
+
+  '@trezoa/rpc-subscriptions-spec@5.0.0':
+    resolution: {integrity: sha512-gs9peWHgQR5wLcd6SZwB79pE+c3j3BRW/WzIi1QsKX0NR5Qykb1grmoksogS2AfpKyEGl7rbTZdgt19UrxHCqw==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/rpc-subscriptions@2.1.1':
-    resolution: {integrity: sha512-xGLIuJHxg0oCNiS40NW/5BPxHM5RurLcEmBAN1VmVtINWTm8wSbEo85a5q7cbMlPP4Vu/28lD7IITjS5qb84UQ==}
+  '@trezoa/rpc-subscriptions-spec@5.1.0':
+    resolution: {integrity: sha512-jKoDyzs4mDpKxL2z/7Zjanfs612LGYQfth36b/rhu8h4BYl6sZ6OAR5ePV+iCqJL5Ikrvt0qZPhlRjCnahs41Q==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/rpc-transformers@2.1.1':
-    resolution: {integrity: sha512-rBOCDQjOI1eQICkqYFV43SsiPdLcahgnrGuDNorS3uOe70pQRPs1PTuuEHqLBwuu9GRw89ifRy49aBNUNmX8uQ==}
+  '@trezoa/rpc-subscriptions@5.0.0':
+    resolution: {integrity: sha512-XPGvVjSH3w8ogwj7cIUQEBqGVfDptN30TIdu8ltC6++4eeBdl/1eHugL3gTGiOpyU0IGNmI13LAsqvTdrXaeOg==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/rpc-transport-http@2.1.1':
-    resolution: {integrity: sha512-Wp7018VaPqhodQjQTDlCM7vTYlm3AdmRyvPZiwv5uzFgnC8B0xhEZW+ZSt1zkSXS6WrKqtufobuBFGtfG6v5KQ==}
+  '@trezoa/rpc-subscriptions@5.1.0':
+    resolution: {integrity: sha512-wwr+nFWvDDepeFNrBp5QmiJBgZm2vzoGKZLMhUDtJp8yQq4B11XW0WPNkZKK09wNa4pAAerbmDpyYzPosjVcoA==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/rpc-types@2.1.1':
-    resolution: {integrity: sha512-IaQKiWyTVvDoD0/3IlUxRY3OADj3cEjfLFCp1JvEdl0ANGReHp4jtqUqrYEeAdN/tGmGoiHt3n4x61wR0zFoJA==}
+  '@trezoa/rpc-transformers@5.0.0':
+    resolution: {integrity: sha512-fovvVSWlrMlvLbmlVZIuisAU5m6iJ3+sM+cVrEHLE9JVH6/gRXHs7do1b8ZpOmee7MQKl8zumS91z+/yZM7eqg==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/rpc@2.1.1':
-    resolution: {integrity: sha512-X15xAx8U0ATznkoNGPUkGIuxTIOmdew1pjQRHAtPSKQTiPbAnO1sowpt4UT7V7bB6zKPu+xKvhFizUuon0PZxg==}
+  '@trezoa/rpc-transformers@5.1.0':
+    resolution: {integrity: sha512-XWD/35dV0okXWioiizhm69654B5KS1X8ReHlHzlfnkuyNQQYkmgeFO+J2yUAtRXXQwAp9gZ/wvXFNGCz17E4Nw==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/signers@2.1.1':
-    resolution: {integrity: sha512-OfYEUgrJSrBDTC43kSQCz9A12A9+6xt2azmG8pP78yXN/bDzDmYF2i4nSzg/JzjjA5hBBYtDJ+15qpS/4cSgug==}
+  '@trezoa/rpc-transport-http@5.0.0':
+    resolution: {integrity: sha512-3g67jxS2LdA1PjCbgDxeNMPnYHjxTgAWamn4SGu1XOnM2Zrca+wr+FMyPzUgGPCsmepky42pYazBT/cytKk1Uw==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/subscribable@2.1.1':
-    resolution: {integrity: sha512-k6qe/Iu94nVtapap9Ei+3mm14gx1H+7YgB6n2bj9qJCdVN6z6ZN9nPtDY2ViIH4qAnxyh7pJKF7iCwNC/iALcw==}
+  '@trezoa/rpc-transport-http@5.1.0':
+    resolution: {integrity: sha512-TyZQbymsCTnhYdeeAxl2Gfu6EQIGfLflsUF6e3FvuOBj3BR8JIxo131798RjgUk2MWJ6GaPkkKaaJVV0MplL3w==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/sysvars@2.1.1':
-    resolution: {integrity: sha512-bG7hNFpFqZm6qk763z5/P9g9Nxc0WXe+aYl6CQSptaPsmqUz1GhlBjAov9ePVFb29MmyMZ5bA+kmCTytiHK1fQ==}
+  '@trezoa/rpc-types@5.0.0':
+    resolution: {integrity: sha512-7Scmei1dHeqqMFAUfm6GUwoYc9cKpsWPqZH7UpA5gmj7JzfqyrHIXWINnfkt/A/TnA02Q+g8DRygoh8Z4LdJSA==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/transaction-confirmation@2.1.1':
-    resolution: {integrity: sha512-hXv0D80u1jNEq2/k1o9IBXXq7+JYg8x4tm0kVWjzvdJjYow8EkQay5quq5o0ciFfWqlOyFwYRC7AGrKc3imE7A==}
+  '@trezoa/rpc-types@5.1.0':
+    resolution: {integrity: sha512-WuxKbU0emf9xg4RU1bxSqhrFBANwDB/RIQsIzaInwm10XV2aGxfB0goVNMl98n10F2R1oAcTwQA8oLcvqHPYfg==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/transaction-messages@2.1.1':
-    resolution: {integrity: sha512-sDf3OWV5X1C8huqsap+DyHIBAUenNJd3h7j/WI9MeIJZdGEtqxssGa2ixhecsMaevtUBKKJM9RqAvfTdRTAnLw==}
+  '@trezoa/rpc@5.0.0':
+    resolution: {integrity: sha512-gbsmY4GnzZaenVWv6tEMH51JJmjbqczNr6HiHhir9nutFWZrJdtg4FsIEYntdz3BJPdpTX5RT/sncx+iT0ClGw==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
 
-  '@trezoa/transactions@2.1.1':
-    resolution: {integrity: sha512-LX/7XfcHH9o0Kpv+tpnCl56IaatD/0sMWw9NnaeZ2f7pJyav9Jmeu5LJXvdHJw2jh277UEqc9bHwKruoMrtOTw==}
+  '@trezoa/rpc@5.1.0':
+    resolution: {integrity: sha512-sVUlTgB3ZSFbBHbgHd6WodgeK8mXKTywKUVuGyBdBDde4KZh9mb/eQEEYJh/sGH1O16yrJI1ssY772o5vDfzwQ==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/signers@5.1.0':
+    resolution: {integrity: sha512-2azmefT3SOA1k+FGLpqlptG4s26lgjRFn7BtR5AsfuzBrmv3FomnxqTUOyTbKMWVb3d1hR6acs049coG/WRo6A==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/subscribable@5.0.0':
+    resolution: {integrity: sha512-hcWqkeQiMHCBxTnpCaKDxiAm2KBTKbXfn8soZYsXTVUQuaqsWgsXYD7nNTv/lZaVON+FHLgwc8KGxD7Ii9d3sw==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/subscribable@5.1.0':
+    resolution: {integrity: sha512-wpVjbYoWwoTPBm2oNlMlxVnvWM5/DmOl4twsIe1SWPd+OUu55SOUO1wu6v6ZFobiFFIiJhoKvrAOK+KPYzxJog==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/sysvars@5.1.0':
+    resolution: {integrity: sha512-88NkPufZAUCMRLIosS90BIh1bkQWdj2J1FIs8KmZ+NdLR5xgKjud6Jtv5UEKh9Ev21qin+8DKuX4k/pmvlsKqQ==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/transaction-confirmation@5.1.0':
+    resolution: {integrity: sha512-vf+FKpMrRlBJWRAiqmfegYxSYp8luYXlg32Lvp38I1/nd725pXS8sqI+mJOBLHbiDJrEmAQyQyrXWOF85GorOQ==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/transaction-messages@5.0.0':
+    resolution: {integrity: sha512-2BtNzC/nzu8UatQqvI7hkg6VpGuLKgNRi/b1NCDauuvq9B51CSQ2UGGjs+brtMLoVQWeca8+VtixBGqzO5V5Vg==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/transaction-messages@5.1.0':
+    resolution: {integrity: sha512-5TLOCNS3qOmdQQYcecujExnK7dXuv6Aj/iQugaJEFJF9W99RlQo0oL6D3Qk6DV5mUSEWbL/F9tdUKH8wIamzuw==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/transactions@5.0.0':
+    resolution: {integrity: sha512-gJcQmPx45HpJ0ck4qPeHSE3HHvwklgAN/PSKGywvtgHLKizz1X08VmZ+iCRWEtPcNCDoCaHkd79/AQbLs7xF7w==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5.3.3'
+
+  '@trezoa/transactions@5.1.0':
+    resolution: {integrity: sha512-od6AUyw0QVX+tqQBaQcy7LN/uGJ6bEJr8uOmHHzi/tiOZOD1e62nu3pwj4Frj5nDYSD8NDTcElbNk5qvZTQA6g==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       typescript: '>=5.3.3'
@@ -521,10 +757,6 @@ packages:
   chalk@4.1.2:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
     engines: {node: '>=10'}
-
-  chalk@5.4.1:
-    resolution: {integrity: sha512-zgVZuo2WcZgfUEmsn6eO3kINexW8RAE4maiQ8QNs8CtpPCSyMiYsULR3HQYkm3w8FIA3SberyMJMSldGsW+U3w==}
-    engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
 
   chalk@5.6.2:
     resolution: {integrity: sha512-7NzBL0rN6fMUW+f7A6Io4h40qQlG+xGmtMxfbnH/K7TAtt8JQWVQK+6g0UXKMeVJoyV5EkkNsErQ8pVD3bLHbA==}
@@ -907,8 +1139,8 @@ packages:
   undici-types@6.21.0:
     resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
 
-  undici-types@7.10.0:
-    resolution: {integrity: sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag==}
+  undici-types@7.16.0:
+    resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
 
   v8-compile-cache-lib@3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
@@ -982,20 +1214,17 @@ snapshots:
       commander: 14.0.2
       picocolors: 1.1.1
 
+  '@codama/errors@1.5.0':
+    dependencies:
+      '@codama/node-types': 1.5.0
+      commander: 14.0.2
+      picocolors: 1.1.1
+
   '@codama/node-types@1.3.0': {}
 
   '@codama/node-types@1.4.0': {}
 
-  '@codama/nodes-from-trezoaanchor@1.3.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
-    dependencies:
-      '@codama/errors': 1.4.0
-      '@codama/nodes': 1.4.0
-      '@codama/visitors': 1.4.0
-      '@noble/hashes': 2.0.1
-      '@trezoa/codecs': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-    transitivePeerDependencies:
-      - fastestsmallesttextencoderdecoder
-      - typescript
+  '@codama/node-types@1.5.0': {}
 
   '@codama/nodes@1.3.0':
     dependencies:
@@ -1006,6 +1235,11 @@ snapshots:
     dependencies:
       '@codama/errors': 1.4.0
       '@codama/node-types': 1.4.0
+
+  '@codama/nodes@1.5.0':
+    dependencies:
+      '@codama/errors': 1.5.0
+      '@codama/node-types': 1.5.0
 
   '@codama/renderers-core@1.0.16':
     dependencies:
@@ -1026,7 +1260,7 @@ snapshots:
       '@codama/renderers-core': 1.0.16
       '@codama/validators': 1.3.0
       '@codama/visitors-core': 1.3.0
-      '@trezoa/codecs-strings': 2.0.0-rc.4(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@solana/codecs-strings': 2.0.0-rc.4(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       nunjucks: 3.2.4(chokidar@3.6.0)
       prettier: 3.6.2
     transitivePeerDependencies:
@@ -1040,7 +1274,7 @@ snapshots:
       '@codama/nodes': 1.3.0
       '@codama/renderers-core': 1.0.16
       '@codama/visitors-core': 1.3.0
-      '@trezoa/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@solana/codecs-strings': 2.3.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       nunjucks: 3.2.4(chokidar@3.6.0)
       prettier: 3.6.2
     transitivePeerDependencies:
@@ -1054,7 +1288,7 @@ snapshots:
       '@codama/nodes': 1.4.0
       '@codama/renderers-core': 1.2.4
       '@codama/visitors-core': 1.4.0
-      '@trezoa/codecs-strings': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@solana/codecs-strings': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       prettier: 3.6.2
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
@@ -1066,7 +1300,7 @@ snapshots:
       '@codama/nodes': 1.3.0
       '@codama/renderers-core': 1.0.16
       '@codama/visitors-core': 1.3.0
-      '@trezoa/codecs-strings': 2.0.0-rc.4(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@solana/codecs-strings': 2.0.0-rc.4(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       nunjucks: 3.2.4(chokidar@3.6.0)
     transitivePeerDependencies:
       - chokidar
@@ -1107,11 +1341,34 @@ snapshots:
       '@codama/nodes': 1.4.0
       json-stable-stringify: 1.3.0
 
+  '@codama/visitors-core@1.5.0':
+    dependencies:
+      '@codama/errors': 1.5.0
+      '@codama/nodes': 1.5.0
+      json-stable-stringify: 1.3.0
+
   '@codama/visitors@1.4.0':
     dependencies:
       '@codama/errors': 1.4.0
       '@codama/nodes': 1.4.0
       '@codama/visitors-core': 1.4.0
+
+  '@codama/visitors@1.5.0':
+    dependencies:
+      '@codama/errors': 1.5.0
+      '@codama/nodes': 1.5.0
+      '@codama/visitors-core': 1.5.0
+
+  '@codoma/nodes-from-trezoaanchor@1.3.8(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+    dependencies:
+      '@codama/errors': 1.5.0
+      '@codama/nodes': 1.5.0
+      '@codama/visitors': 1.5.0
+      '@noble/hashes': 2.0.1
+      '@trezoa/codecs': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+      - typescript
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -1128,138 +1385,212 @@ snapshots:
 
   '@noble/hashes@2.0.1': {}
 
-  '@trezoa/accounts@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+  '@solana/codecs-core@2.0.0-rc.4(typescript@5.8.3)':
     dependencies:
-      '@trezoa/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
-      '@trezoa/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
-      '@trezoa/rpc-spec': 2.1.1(typescript@5.8.3)
-      '@trezoa/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@solana/errors': 2.0.0-rc.4(typescript@5.8.3)
+      typescript: 5.8.3
+
+  '@solana/codecs-core@2.3.0(typescript@5.8.3)':
+    dependencies:
+      '@solana/errors': 2.3.0(typescript@5.8.3)
+      typescript: 5.8.3
+
+  '@solana/codecs-core@5.1.0(typescript@5.8.3)':
+    dependencies:
+      '@solana/errors': 5.1.0(typescript@5.8.3)
+      typescript: 5.8.3
+
+  '@solana/codecs-numbers@2.0.0-rc.4(typescript@5.8.3)':
+    dependencies:
+      '@solana/codecs-core': 2.0.0-rc.4(typescript@5.8.3)
+      '@solana/errors': 2.0.0-rc.4(typescript@5.8.3)
+      typescript: 5.8.3
+
+  '@solana/codecs-numbers@2.3.0(typescript@5.8.3)':
+    dependencies:
+      '@solana/codecs-core': 2.3.0(typescript@5.8.3)
+      '@solana/errors': 2.3.0(typescript@5.8.3)
+      typescript: 5.8.3
+
+  '@solana/codecs-numbers@5.1.0(typescript@5.8.3)':
+    dependencies:
+      '@solana/codecs-core': 5.1.0(typescript@5.8.3)
+      '@solana/errors': 5.1.0(typescript@5.8.3)
+      typescript: 5.8.3
+
+  '@solana/codecs-strings@2.0.0-rc.4(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+    dependencies:
+      '@solana/codecs-core': 2.0.0-rc.4(typescript@5.8.3)
+      '@solana/codecs-numbers': 2.0.0-rc.4(typescript@5.8.3)
+      '@solana/errors': 2.0.0-rc.4(typescript@5.8.3)
+      fastestsmallesttextencoderdecoder: 1.0.22
+      typescript: 5.8.3
+
+  '@solana/codecs-strings@2.3.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+    dependencies:
+      '@solana/codecs-core': 2.3.0(typescript@5.8.3)
+      '@solana/codecs-numbers': 2.3.0(typescript@5.8.3)
+      '@solana/errors': 2.3.0(typescript@5.8.3)
+      fastestsmallesttextencoderdecoder: 1.0.22
+      typescript: 5.8.3
+
+  '@solana/codecs-strings@5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+    dependencies:
+      '@solana/codecs-core': 5.1.0(typescript@5.8.3)
+      '@solana/codecs-numbers': 5.1.0(typescript@5.8.3)
+      '@solana/errors': 5.1.0(typescript@5.8.3)
+      typescript: 5.8.3
+    optionalDependencies:
+      fastestsmallesttextencoderdecoder: 1.0.22
+
+  '@solana/errors@2.0.0-rc.4(typescript@5.8.3)':
+    dependencies:
+      chalk: 5.6.2
+      commander: 12.1.0
+      typescript: 5.8.3
+
+  '@solana/errors@2.3.0(typescript@5.8.3)':
+    dependencies:
+      chalk: 5.6.2
+      commander: 14.0.2
+      typescript: 5.8.3
+
+  '@solana/errors@5.1.0(typescript@5.8.3)':
+    dependencies:
+      chalk: 5.6.2
+      commander: 14.0.2
+      typescript: 5.8.3
+
+  '@trezoa/accounts@5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/addresses': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs-core': 5.0.0(typescript@5.8.3)
+      '@trezoa/codecs-strings': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 5.0.0(typescript@5.8.3)
+      '@trezoa/rpc-spec': 5.0.0(typescript@5.8.3)
+      '@trezoa/rpc-types': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
 
-  '@trezoa/addresses@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+  '@trezoa/accounts@5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
-      '@trezoa/assertions': 2.1.1(typescript@5.8.3)
-      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
-      '@trezoa/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
-      '@trezoa/nominal-types': 2.1.1(typescript@5.8.3)
+      '@trezoa/addresses': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs-core': 5.1.0(typescript@5.8.3)
+      '@trezoa/codecs-strings': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
+      '@trezoa/rpc-spec': 5.1.0(typescript@5.8.3)
+      '@trezoa/rpc-types': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
 
-  '@trezoa/assertions@2.1.1(typescript@5.8.3)':
+  '@trezoa/addresses@5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/assertions': 5.0.0(typescript@5.8.3)
+      '@trezoa/codecs-core': 5.0.0(typescript@5.8.3)
+      '@trezoa/codecs-strings': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 5.0.0(typescript@5.8.3)
+      '@trezoa/nominal-types': 5.0.0(typescript@5.8.3)
       typescript: 5.8.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
 
-  '@trezoa/codecs-core@2.0.0-rc.4(typescript@5.8.3)':
+  '@trezoa/addresses@5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
-      '@trezoa/errors': 2.0.0-rc.4(typescript@5.8.3)
+      '@trezoa/assertions': 5.0.0(typescript@5.8.3)
+      '@trezoa/codecs-core': 5.0.0(typescript@5.8.3)
+      '@trezoa/codecs-strings': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 5.0.0(typescript@5.8.3)
+      '@trezoa/nominal-types': 5.0.0(typescript@5.8.3)
       typescript: 5.8.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
 
-  '@trezoa/codecs-core@2.1.1(typescript@5.8.3)':
-    dependencies:
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
-      typescript: 5.8.3
-
-  '@trezoa/codecs-core@5.0.0(typescript@5.8.3)':
+  '@trezoa/assertions@5.0.0(typescript@5.8.3)':
     dependencies:
       '@trezoa/errors': 5.0.0(typescript@5.8.3)
       typescript: 5.8.3
 
-  '@trezoa/codecs-data-structures@2.1.1(typescript@5.8.3)':
+  '@trezoa/assertions@5.1.0(typescript@5.8.3)':
     dependencies:
-      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
-      '@trezoa/codecs-numbers': 2.1.1(typescript@5.8.3)
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
+      typescript: 5.8.3
+
+  '@trezoa/codecs-core@5.0.0(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
+      typescript: 5.8.3
+
+  '@trezoa/codecs-core@5.1.0(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
       typescript: 5.8.3
 
   '@trezoa/codecs-data-structures@5.0.0(typescript@5.8.3)':
     dependencies:
       '@trezoa/codecs-core': 5.0.0(typescript@5.8.3)
-      '@trezoa/codecs-numbers': 5.0.0(typescript@5.8.3)
+      '@trezoa/codecs-numbers': 2.1.1(typescript@5.8.3)
       '@trezoa/errors': 5.0.0(typescript@5.8.3)
       typescript: 5.8.3
 
-  '@trezoa/codecs-numbers@2.0.0-rc.4(typescript@5.8.3)':
+  '@trezoa/codecs-data-structures@5.1.0(typescript@5.8.3)':
     dependencies:
-      '@trezoa/codecs-core': 2.0.0-rc.4(typescript@5.8.3)
-      '@trezoa/errors': 2.0.0-rc.4(typescript@5.8.3)
+      '@trezoa/codecs-core': 5.1.0(typescript@5.8.3)
+      '@trezoa/codecs-numbers': 5.1.0(typescript@5.8.3)
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
       typescript: 5.8.3
 
   '@trezoa/codecs-numbers@2.1.1(typescript@5.8.3)':
-    dependencies:
-      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
-      typescript: 5.8.3
-
-  '@trezoa/codecs-numbers@5.0.0(typescript@5.8.3)':
     dependencies:
       '@trezoa/codecs-core': 5.0.0(typescript@5.8.3)
       '@trezoa/errors': 5.0.0(typescript@5.8.3)
       typescript: 5.8.3
 
-  '@trezoa/codecs-strings@2.0.0-rc.4(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+  '@trezoa/codecs-numbers@5.1.0(typescript@5.8.3)':
     dependencies:
-      '@trezoa/codecs-core': 2.0.0-rc.4(typescript@5.8.3)
-      '@trezoa/codecs-numbers': 2.0.0-rc.4(typescript@5.8.3)
-      '@trezoa/errors': 2.0.0-rc.4(typescript@5.8.3)
-      fastestsmallesttextencoderdecoder: 1.0.22
-      typescript: 5.8.3
-
-  '@trezoa/codecs-strings@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
-    dependencies:
-      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
-      '@trezoa/codecs-numbers': 2.1.1(typescript@5.8.3)
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
-      fastestsmallesttextencoderdecoder: 1.0.22
+      '@trezoa/codecs-core': 5.1.0(typescript@5.8.3)
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
       typescript: 5.8.3
 
   '@trezoa/codecs-strings@5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
       '@trezoa/codecs-core': 5.0.0(typescript@5.8.3)
-      '@trezoa/codecs-numbers': 5.0.0(typescript@5.8.3)
+      '@trezoa/codecs-numbers': 2.1.1(typescript@5.8.3)
       '@trezoa/errors': 5.0.0(typescript@5.8.3)
       fastestsmallesttextencoderdecoder: 1.0.22
       typescript: 5.8.3
 
-  '@trezoa/codecs@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+  '@trezoa/codecs-strings@5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
-      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
-      '@trezoa/codecs-data-structures': 2.1.1(typescript@5.8.3)
-      '@trezoa/codecs-numbers': 2.1.1(typescript@5.8.3)
-      '@trezoa/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/options': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs-core': 5.1.0(typescript@5.8.3)
+      '@trezoa/codecs-numbers': 5.1.0(typescript@5.8.3)
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
       typescript: 5.8.3
-    transitivePeerDependencies:
-      - fastestsmallesttextencoderdecoder
+    optionalDependencies:
+      fastestsmallesttextencoderdecoder: 1.0.22
 
   '@trezoa/codecs@5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
       '@trezoa/codecs-core': 5.0.0(typescript@5.8.3)
       '@trezoa/codecs-data-structures': 5.0.0(typescript@5.8.3)
-      '@trezoa/codecs-numbers': 5.0.0(typescript@5.8.3)
+      '@trezoa/codecs-numbers': 2.1.1(typescript@5.8.3)
       '@trezoa/codecs-strings': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       '@trezoa/options': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
 
-  '@trezoa/errors@2.0.0-rc.4(typescript@5.8.3)':
+  '@trezoa/codecs@5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
-      chalk: 5.6.2
-      commander: 12.1.0
+      '@trezoa/codecs-core': 5.1.0(typescript@5.8.3)
+      '@trezoa/codecs-data-structures': 5.1.0(typescript@5.8.3)
+      '@trezoa/codecs-numbers': 5.1.0(typescript@5.8.3)
+      '@trezoa/codecs-strings': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/options': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       typescript: 5.8.3
-
-  '@trezoa/errors@2.1.1(typescript@5.8.3)':
-    dependencies:
-      chalk: 5.4.1
-      commander: 13.1.0
-      typescript: 5.8.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
 
   '@trezoa/errors@5.0.0(typescript@5.8.3)':
     dependencies:
@@ -1267,67 +1598,119 @@ snapshots:
       commander: 14.0.1
       typescript: 5.8.3
 
-  '@trezoa/fast-stable-stringify@2.1.1(typescript@5.8.3)':
+  '@trezoa/errors@5.1.0(typescript@5.8.3)':
+    dependencies:
+      chalk: 5.6.2
+      commander: 14.0.2
+      typescript: 5.8.3
+
+  '@trezoa/fast-stable-stringify@5.0.0(typescript@5.8.3)':
     dependencies:
       typescript: 5.8.3
 
-  '@trezoa/functional@2.1.1(typescript@5.8.3)':
+  '@trezoa/fast-stable-stringify@5.1.0(typescript@5.8.3)':
     dependencies:
       typescript: 5.8.3
 
-  '@trezoa/instructions@2.1.1(typescript@5.8.3)':
+  '@trezoa/functional@5.0.0(typescript@5.8.3)':
     dependencies:
-      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
       typescript: 5.8.3
 
-  '@trezoa/keys@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+  '@trezoa/functional@5.1.0(typescript@5.8.3)':
     dependencies:
-      '@trezoa/assertions': 2.1.1(typescript@5.8.3)
-      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
-      '@trezoa/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
-      '@trezoa/nominal-types': 2.1.1(typescript@5.8.3)
+      typescript: 5.8.3
+
+  '@trezoa/instruction-plans@5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
+      '@trezoa/instructions': 5.1.0(typescript@5.8.3)
+      '@trezoa/keys': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/promises': 5.1.0(typescript@5.8.3)
+      '@trezoa/transaction-messages': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transactions': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
 
-  '@trezoa/kit@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.2)':
+  '@trezoa/instructions@5.0.0(typescript@5.8.3)':
     dependencies:
-      '@trezoa/accounts': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/codecs': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
-      '@trezoa/functional': 2.1.1(typescript@5.8.3)
-      '@trezoa/instructions': 2.1.1(typescript@5.8.3)
-      '@trezoa/keys': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/programs': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/rpc': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/rpc-parsed-types': 2.1.1(typescript@5.8.3)
-      '@trezoa/rpc-spec-types': 2.1.1(typescript@5.8.3)
-      '@trezoa/rpc-subscriptions': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.2)
-      '@trezoa/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/signers': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/sysvars': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/transaction-confirmation': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.2)
-      '@trezoa/transaction-messages': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/transactions': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs-core': 5.0.0(typescript@5.8.3)
+      '@trezoa/errors': 5.0.0(typescript@5.8.3)
+      typescript: 5.8.3
+
+  '@trezoa/instructions@5.1.0(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/codecs-core': 5.1.0(typescript@5.8.3)
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
+      typescript: 5.8.3
+
+  '@trezoa/keys@5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/assertions': 5.0.0(typescript@5.8.3)
+      '@trezoa/codecs-core': 5.0.0(typescript@5.8.3)
+      '@trezoa/codecs-strings': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 5.0.0(typescript@5.8.3)
+      '@trezoa/nominal-types': 5.0.0(typescript@5.8.3)
+      typescript: 5.8.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+
+  '@trezoa/keys@5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/assertions': 5.1.0(typescript@5.8.3)
+      '@trezoa/codecs-core': 5.1.0(typescript@5.8.3)
+      '@trezoa/codecs-strings': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
+      '@trezoa/nominal-types': 5.1.0(typescript@5.8.3)
+      typescript: 5.8.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+
+  '@trezoa/kit@5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.2)':
+    dependencies:
+      '@trezoa/accounts': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/addresses': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
+      '@trezoa/functional': 5.1.0(typescript@5.8.3)
+      '@trezoa/instruction-plans': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/instructions': 5.1.0(typescript@5.8.3)
+      '@trezoa/keys': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/offchain-messages': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/programs': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-parsed-types': 5.1.0(typescript@5.8.3)
+      '@trezoa/rpc-spec-types': 5.1.0(typescript@5.8.3)
+      '@trezoa/rpc-subscriptions': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.2)
+      '@trezoa/rpc-types': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/signers': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/sysvars': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transaction-confirmation': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.2)
+      '@trezoa/transaction-messages': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transactions': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
       - ws
 
-  '@trezoa/nominal-types@2.1.1(typescript@5.8.3)':
+  '@trezoa/nominal-types@5.0.0(typescript@5.8.3)':
     dependencies:
       typescript: 5.8.3
 
-  '@trezoa/options@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+  '@trezoa/nominal-types@5.1.0(typescript@5.8.3)':
     dependencies:
-      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
-      '@trezoa/codecs-data-structures': 2.1.1(typescript@5.8.3)
-      '@trezoa/codecs-numbers': 2.1.1(typescript@5.8.3)
-      '@trezoa/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
+      typescript: 5.8.3
+
+  '@trezoa/offchain-messages@5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/addresses': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs-core': 5.1.0(typescript@5.8.3)
+      '@trezoa/codecs-data-structures': 5.1.0(typescript@5.8.3)
+      '@trezoa/codecs-numbers': 5.1.0(typescript@5.8.3)
+      '@trezoa/codecs-strings': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
+      '@trezoa/keys': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/nominal-types': 5.1.0(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
@@ -1336,225 +1719,405 @@ snapshots:
     dependencies:
       '@trezoa/codecs-core': 5.0.0(typescript@5.8.3)
       '@trezoa/codecs-data-structures': 5.0.0(typescript@5.8.3)
-      '@trezoa/codecs-numbers': 5.0.0(typescript@5.8.3)
+      '@trezoa/codecs-numbers': 2.1.1(typescript@5.8.3)
       '@trezoa/codecs-strings': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       '@trezoa/errors': 5.0.0(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
 
-  '@trezoa/programs@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+  '@trezoa/options@5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
-      '@trezoa/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-core': 5.1.0(typescript@5.8.3)
+      '@trezoa/codecs-data-structures': 5.1.0(typescript@5.8.3)
+      '@trezoa/codecs-numbers': 5.1.0(typescript@5.8.3)
+      '@trezoa/codecs-strings': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
 
-  '@trezoa/promises@2.1.1(typescript@5.8.3)':
+  '@trezoa/programs@5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
-      typescript: 5.8.3
-
-  '@trezoa/rpc-api@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
-    dependencies:
-      '@trezoa/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
-      '@trezoa/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
-      '@trezoa/keys': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/rpc-parsed-types': 2.1.1(typescript@5.8.3)
-      '@trezoa/rpc-spec': 2.1.1(typescript@5.8.3)
-      '@trezoa/rpc-transformers': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/transaction-messages': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/transactions': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/addresses': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
 
-  '@trezoa/rpc-parsed-types@2.1.1(typescript@5.8.3)':
+  '@trezoa/promises@5.0.0(typescript@5.8.3)':
     dependencies:
       typescript: 5.8.3
 
-  '@trezoa/rpc-spec-types@2.1.1(typescript@5.8.3)':
+  '@trezoa/promises@5.1.0(typescript@5.8.3)':
     dependencies:
       typescript: 5.8.3
 
-  '@trezoa/rpc-spec@2.1.1(typescript@5.8.3)':
+  '@trezoa/rpc-api@5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
-      '@trezoa/rpc-spec-types': 2.1.1(typescript@5.8.3)
-      typescript: 5.8.3
-
-  '@trezoa/rpc-subscriptions-api@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
-    dependencies:
-      '@trezoa/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/keys': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/rpc-subscriptions-spec': 2.1.1(typescript@5.8.3)
-      '@trezoa/rpc-transformers': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/transaction-messages': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/transactions': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/addresses': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs-core': 5.0.0(typescript@5.8.3)
+      '@trezoa/codecs-strings': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 5.0.0(typescript@5.8.3)
+      '@trezoa/keys': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-parsed-types': 5.0.0(typescript@5.8.3)
+      '@trezoa/rpc-spec': 5.0.0(typescript@5.8.3)
+      '@trezoa/rpc-transformers': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-types': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transaction-messages': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transactions': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
 
-  '@trezoa/rpc-subscriptions-channel-websocket@2.1.1(typescript@5.8.3)(ws@8.18.2)':
+  '@trezoa/rpc-api@5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
-      '@trezoa/functional': 2.1.1(typescript@5.8.3)
-      '@trezoa/rpc-subscriptions-spec': 2.1.1(typescript@5.8.3)
-      '@trezoa/subscribable': 2.1.1(typescript@5.8.3)
+      '@trezoa/addresses': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs-core': 5.1.0(typescript@5.8.3)
+      '@trezoa/codecs-strings': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
+      '@trezoa/keys': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-parsed-types': 5.1.0(typescript@5.8.3)
+      '@trezoa/rpc-spec': 5.1.0(typescript@5.8.3)
+      '@trezoa/rpc-transformers': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-types': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transaction-messages': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transactions': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      typescript: 5.8.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+
+  '@trezoa/rpc-parsed-types@5.0.0(typescript@5.8.3)':
+    dependencies:
+      typescript: 5.8.3
+
+  '@trezoa/rpc-parsed-types@5.1.0(typescript@5.8.3)':
+    dependencies:
+      typescript: 5.8.3
+
+  '@trezoa/rpc-spec-types@5.0.0(typescript@5.8.3)':
+    dependencies:
+      typescript: 5.8.3
+
+  '@trezoa/rpc-spec-types@5.1.0(typescript@5.8.3)':
+    dependencies:
+      typescript: 5.8.3
+
+  '@trezoa/rpc-spec@5.0.0(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/errors': 5.0.0(typescript@5.8.3)
+      '@trezoa/rpc-spec-types': 5.0.0(typescript@5.8.3)
+      typescript: 5.8.3
+
+  '@trezoa/rpc-spec@5.1.0(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
+      '@trezoa/rpc-spec-types': 5.1.0(typescript@5.8.3)
+      typescript: 5.8.3
+
+  '@trezoa/rpc-subscriptions-api@5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/addresses': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/keys': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-subscriptions-spec': 5.0.0(typescript@5.8.3)
+      '@trezoa/rpc-transformers': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-types': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transaction-messages': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transactions': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      typescript: 5.8.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+
+  '@trezoa/rpc-subscriptions-api@5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/addresses': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/keys': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-subscriptions-spec': 5.1.0(typescript@5.8.3)
+      '@trezoa/rpc-transformers': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-types': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transaction-messages': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transactions': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      typescript: 5.8.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+
+  '@trezoa/rpc-subscriptions-channel-websocket@5.0.0(typescript@5.8.3)(ws@8.18.2)':
+    dependencies:
+      '@trezoa/errors': 5.0.0(typescript@5.8.3)
+      '@trezoa/functional': 5.0.0(typescript@5.8.3)
+      '@trezoa/rpc-subscriptions-spec': 5.0.0(typescript@5.8.3)
+      '@trezoa/subscribable': 5.0.0(typescript@5.8.3)
       typescript: 5.8.3
       ws: 8.18.2
 
-  '@trezoa/rpc-subscriptions-spec@2.1.1(typescript@5.8.3)':
+  '@trezoa/rpc-subscriptions-channel-websocket@5.1.0(typescript@5.8.3)(ws@8.18.2)':
     dependencies:
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
-      '@trezoa/promises': 2.1.1(typescript@5.8.3)
-      '@trezoa/rpc-spec-types': 2.1.1(typescript@5.8.3)
-      '@trezoa/subscribable': 2.1.1(typescript@5.8.3)
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
+      '@trezoa/functional': 5.1.0(typescript@5.8.3)
+      '@trezoa/rpc-subscriptions-spec': 5.1.0(typescript@5.8.3)
+      '@trezoa/subscribable': 5.1.0(typescript@5.8.3)
+      typescript: 5.8.3
+    optionalDependencies:
+      ws: 8.18.2
+
+  '@trezoa/rpc-subscriptions-spec@5.0.0(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/errors': 5.0.0(typescript@5.8.3)
+      '@trezoa/promises': 5.0.0(typescript@5.8.3)
+      '@trezoa/rpc-spec-types': 5.0.0(typescript@5.8.3)
+      '@trezoa/subscribable': 5.0.0(typescript@5.8.3)
       typescript: 5.8.3
 
-  '@trezoa/rpc-subscriptions@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.2)':
+  '@trezoa/rpc-subscriptions-spec@5.1.0(typescript@5.8.3)':
     dependencies:
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
-      '@trezoa/fast-stable-stringify': 2.1.1(typescript@5.8.3)
-      '@trezoa/functional': 2.1.1(typescript@5.8.3)
-      '@trezoa/promises': 2.1.1(typescript@5.8.3)
-      '@trezoa/rpc-spec-types': 2.1.1(typescript@5.8.3)
-      '@trezoa/rpc-subscriptions-api': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/rpc-subscriptions-channel-websocket': 2.1.1(typescript@5.8.3)(ws@8.18.2)
-      '@trezoa/rpc-subscriptions-spec': 2.1.1(typescript@5.8.3)
-      '@trezoa/rpc-transformers': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/subscribable': 2.1.1(typescript@5.8.3)
-      typescript: 5.8.3
-    transitivePeerDependencies:
-      - fastestsmallesttextencoderdecoder
-      - ws
-
-  '@trezoa/rpc-transformers@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
-    dependencies:
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
-      '@trezoa/functional': 2.1.1(typescript@5.8.3)
-      '@trezoa/nominal-types': 2.1.1(typescript@5.8.3)
-      '@trezoa/rpc-spec-types': 2.1.1(typescript@5.8.3)
-      '@trezoa/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      typescript: 5.8.3
-    transitivePeerDependencies:
-      - fastestsmallesttextencoderdecoder
-
-  '@trezoa/rpc-transport-http@2.1.1(typescript@5.8.3)':
-    dependencies:
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
-      '@trezoa/rpc-spec': 2.1.1(typescript@5.8.3)
-      '@trezoa/rpc-spec-types': 2.1.1(typescript@5.8.3)
-      typescript: 5.8.3
-      undici-types: 7.10.0
-
-  '@trezoa/rpc-types@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
-    dependencies:
-      '@trezoa/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
-      '@trezoa/codecs-numbers': 2.1.1(typescript@5.8.3)
-      '@trezoa/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
-      '@trezoa/nominal-types': 2.1.1(typescript@5.8.3)
-      typescript: 5.8.3
-    transitivePeerDependencies:
-      - fastestsmallesttextencoderdecoder
-
-  '@trezoa/rpc@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
-    dependencies:
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
-      '@trezoa/fast-stable-stringify': 2.1.1(typescript@5.8.3)
-      '@trezoa/functional': 2.1.1(typescript@5.8.3)
-      '@trezoa/rpc-api': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/rpc-spec': 2.1.1(typescript@5.8.3)
-      '@trezoa/rpc-spec-types': 2.1.1(typescript@5.8.3)
-      '@trezoa/rpc-transformers': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/rpc-transport-http': 2.1.1(typescript@5.8.3)
-      '@trezoa/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      typescript: 5.8.3
-    transitivePeerDependencies:
-      - fastestsmallesttextencoderdecoder
-
-  '@trezoa/signers@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
-    dependencies:
-      '@trezoa/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
-      '@trezoa/instructions': 2.1.1(typescript@5.8.3)
-      '@trezoa/keys': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/nominal-types': 2.1.1(typescript@5.8.3)
-      '@trezoa/transaction-messages': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/transactions': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      typescript: 5.8.3
-    transitivePeerDependencies:
-      - fastestsmallesttextencoderdecoder
-
-  '@trezoa/subscribable@2.1.1(typescript@5.8.3)':
-    dependencies:
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
+      '@trezoa/promises': 5.1.0(typescript@5.8.3)
+      '@trezoa/rpc-spec-types': 5.1.0(typescript@5.8.3)
+      '@trezoa/subscribable': 5.1.0(typescript@5.8.3)
       typescript: 5.8.3
 
-  '@trezoa/sysvars@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+  '@trezoa/rpc-subscriptions@5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.2)':
     dependencies:
-      '@trezoa/accounts': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/codecs': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
-      '@trezoa/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      typescript: 5.8.3
-    transitivePeerDependencies:
-      - fastestsmallesttextencoderdecoder
-
-  '@trezoa/transaction-confirmation@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.2)':
-    dependencies:
-      '@trezoa/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
-      '@trezoa/keys': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/promises': 2.1.1(typescript@5.8.3)
-      '@trezoa/rpc': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/rpc-subscriptions': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.2)
-      '@trezoa/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/transaction-messages': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/transactions': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 5.0.0(typescript@5.8.3)
+      '@trezoa/fast-stable-stringify': 5.0.0(typescript@5.8.3)
+      '@trezoa/functional': 5.0.0(typescript@5.8.3)
+      '@trezoa/promises': 5.0.0(typescript@5.8.3)
+      '@trezoa/rpc-spec-types': 5.0.0(typescript@5.8.3)
+      '@trezoa/rpc-subscriptions-api': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-subscriptions-channel-websocket': 5.0.0(typescript@5.8.3)(ws@8.18.2)
+      '@trezoa/rpc-subscriptions-spec': 5.0.0(typescript@5.8.3)
+      '@trezoa/rpc-transformers': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-types': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/subscribable': 5.0.0(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
       - ws
 
-  '@trezoa/transaction-messages@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+  '@trezoa/rpc-subscriptions@5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.2)':
     dependencies:
-      '@trezoa/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
-      '@trezoa/codecs-data-structures': 2.1.1(typescript@5.8.3)
-      '@trezoa/codecs-numbers': 2.1.1(typescript@5.8.3)
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
-      '@trezoa/functional': 2.1.1(typescript@5.8.3)
-      '@trezoa/instructions': 2.1.1(typescript@5.8.3)
-      '@trezoa/nominal-types': 2.1.1(typescript@5.8.3)
-      '@trezoa/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
+      '@trezoa/fast-stable-stringify': 5.1.0(typescript@5.8.3)
+      '@trezoa/functional': 5.1.0(typescript@5.8.3)
+      '@trezoa/promises': 5.1.0(typescript@5.8.3)
+      '@trezoa/rpc-spec-types': 5.1.0(typescript@5.8.3)
+      '@trezoa/rpc-subscriptions-api': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-subscriptions-channel-websocket': 5.1.0(typescript@5.8.3)(ws@8.18.2)
+      '@trezoa/rpc-subscriptions-spec': 5.1.0(typescript@5.8.3)
+      '@trezoa/rpc-transformers': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-types': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/subscribable': 5.1.0(typescript@5.8.3)
+      typescript: 5.8.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+      - ws
+
+  '@trezoa/rpc-transformers@5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/errors': 5.0.0(typescript@5.8.3)
+      '@trezoa/functional': 5.0.0(typescript@5.8.3)
+      '@trezoa/nominal-types': 5.0.0(typescript@5.8.3)
+      '@trezoa/rpc-spec-types': 5.0.0(typescript@5.8.3)
+      '@trezoa/rpc-types': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
 
-  '@trezoa/transactions@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+  '@trezoa/rpc-transformers@5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
     dependencies:
-      '@trezoa/addresses': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/codecs-core': 2.1.1(typescript@5.8.3)
-      '@trezoa/codecs-data-structures': 2.1.1(typescript@5.8.3)
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
+      '@trezoa/functional': 5.1.0(typescript@5.8.3)
+      '@trezoa/nominal-types': 5.1.0(typescript@5.8.3)
+      '@trezoa/rpc-spec-types': 5.1.0(typescript@5.8.3)
+      '@trezoa/rpc-types': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      typescript: 5.8.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+
+  '@trezoa/rpc-transport-http@5.0.0(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/errors': 5.0.0(typescript@5.8.3)
+      '@trezoa/rpc-spec': 5.0.0(typescript@5.8.3)
+      '@trezoa/rpc-spec-types': 5.0.0(typescript@5.8.3)
+      typescript: 5.8.3
+      undici-types: 7.16.0
+
+  '@trezoa/rpc-transport-http@5.1.0(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
+      '@trezoa/rpc-spec': 5.1.0(typescript@5.8.3)
+      '@trezoa/rpc-spec-types': 5.1.0(typescript@5.8.3)
+      typescript: 5.8.3
+      undici-types: 7.16.0
+
+  '@trezoa/rpc-types@5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/addresses': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs-core': 5.0.0(typescript@5.8.3)
       '@trezoa/codecs-numbers': 2.1.1(typescript@5.8.3)
-      '@trezoa/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/errors': 2.1.1(typescript@5.8.3)
-      '@trezoa/functional': 2.1.1(typescript@5.8.3)
-      '@trezoa/instructions': 2.1.1(typescript@5.8.3)
-      '@trezoa/keys': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/nominal-types': 2.1.1(typescript@5.8.3)
-      '@trezoa/rpc-types': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
-      '@trezoa/transaction-messages': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs-strings': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 5.0.0(typescript@5.8.3)
+      '@trezoa/nominal-types': 5.0.0(typescript@5.8.3)
+      typescript: 5.8.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+
+  '@trezoa/rpc-types@5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/addresses': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs-core': 5.1.0(typescript@5.8.3)
+      '@trezoa/codecs-numbers': 5.1.0(typescript@5.8.3)
+      '@trezoa/codecs-strings': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
+      '@trezoa/nominal-types': 5.1.0(typescript@5.8.3)
+      typescript: 5.8.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+
+  '@trezoa/rpc@5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/errors': 5.0.0(typescript@5.8.3)
+      '@trezoa/fast-stable-stringify': 5.0.0(typescript@5.8.3)
+      '@trezoa/functional': 5.0.0(typescript@5.8.3)
+      '@trezoa/rpc-api': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-spec': 5.0.0(typescript@5.8.3)
+      '@trezoa/rpc-spec-types': 5.0.0(typescript@5.8.3)
+      '@trezoa/rpc-transformers': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-transport-http': 5.0.0(typescript@5.8.3)
+      '@trezoa/rpc-types': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      typescript: 5.8.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+
+  '@trezoa/rpc@5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
+      '@trezoa/fast-stable-stringify': 5.1.0(typescript@5.8.3)
+      '@trezoa/functional': 5.1.0(typescript@5.8.3)
+      '@trezoa/rpc-api': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-spec': 5.1.0(typescript@5.8.3)
+      '@trezoa/rpc-spec-types': 5.1.0(typescript@5.8.3)
+      '@trezoa/rpc-transformers': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-transport-http': 5.1.0(typescript@5.8.3)
+      '@trezoa/rpc-types': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      typescript: 5.8.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+
+  '@trezoa/signers@5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/addresses': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs-core': 5.1.0(typescript@5.8.3)
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
+      '@trezoa/instructions': 5.1.0(typescript@5.8.3)
+      '@trezoa/keys': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/nominal-types': 5.1.0(typescript@5.8.3)
+      '@trezoa/offchain-messages': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transaction-messages': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transactions': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      typescript: 5.8.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+
+  '@trezoa/subscribable@5.0.0(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/errors': 5.0.0(typescript@5.8.3)
+      typescript: 5.8.3
+
+  '@trezoa/subscribable@5.1.0(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
+      typescript: 5.8.3
+
+  '@trezoa/sysvars@5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/accounts': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 5.0.0(typescript@5.8.3)
+      '@trezoa/rpc-types': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      typescript: 5.8.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+
+  '@trezoa/transaction-confirmation@5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.2)':
+    dependencies:
+      '@trezoa/addresses': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs-strings': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 5.0.0(typescript@5.8.3)
+      '@trezoa/keys': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/promises': 5.0.0(typescript@5.8.3)
+      '@trezoa/rpc': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/rpc-subscriptions': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.2)
+      '@trezoa/rpc-types': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transaction-messages': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transactions': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      typescript: 5.8.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+      - ws
+
+  '@trezoa/transaction-messages@5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/addresses': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs-core': 5.0.0(typescript@5.8.3)
+      '@trezoa/codecs-data-structures': 5.0.0(typescript@5.8.3)
+      '@trezoa/codecs-numbers': 2.1.1(typescript@5.8.3)
+      '@trezoa/errors': 5.0.0(typescript@5.8.3)
+      '@trezoa/functional': 5.0.0(typescript@5.8.3)
+      '@trezoa/instructions': 5.0.0(typescript@5.8.3)
+      '@trezoa/nominal-types': 5.0.0(typescript@5.8.3)
+      '@trezoa/rpc-types': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      typescript: 5.8.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+
+  '@trezoa/transaction-messages@5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/addresses': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs-core': 5.1.0(typescript@5.8.3)
+      '@trezoa/codecs-data-structures': 5.1.0(typescript@5.8.3)
+      '@trezoa/codecs-numbers': 5.1.0(typescript@5.8.3)
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
+      '@trezoa/functional': 5.1.0(typescript@5.8.3)
+      '@trezoa/instructions': 5.1.0(typescript@5.8.3)
+      '@trezoa/nominal-types': 5.1.0(typescript@5.8.3)
+      '@trezoa/rpc-types': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      typescript: 5.8.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+
+  '@trezoa/transactions@5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/addresses': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs-core': 5.0.0(typescript@5.8.3)
+      '@trezoa/codecs-data-structures': 5.0.0(typescript@5.8.3)
+      '@trezoa/codecs-numbers': 2.1.1(typescript@5.8.3)
+      '@trezoa/codecs-strings': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 5.0.0(typescript@5.8.3)
+      '@trezoa/functional': 5.0.0(typescript@5.8.3)
+      '@trezoa/instructions': 5.0.0(typescript@5.8.3)
+      '@trezoa/keys': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/nominal-types': 5.0.0(typescript@5.8.3)
+      '@trezoa/rpc-types': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transaction-messages': 5.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      typescript: 5.8.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+
+  '@trezoa/transactions@5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+    dependencies:
+      '@trezoa/addresses': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/codecs-core': 5.1.0(typescript@5.8.3)
+      '@trezoa/codecs-data-structures': 5.1.0(typescript@5.8.3)
+      '@trezoa/codecs-numbers': 5.1.0(typescript@5.8.3)
+      '@trezoa/codecs-strings': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/errors': 5.1.0(typescript@5.8.3)
+      '@trezoa/functional': 5.1.0(typescript@5.8.3)
+      '@trezoa/instructions': 5.1.0(typescript@5.8.3)
+      '@trezoa/keys': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/nominal-types': 5.1.0(typescript@5.8.3)
+      '@trezoa/rpc-types': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@trezoa/transaction-messages': 5.1.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
@@ -1653,8 +2216,6 @@ snapshots:
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
-
-  chalk@5.4.1: {}
 
   chalk@5.6.2: {}
 
@@ -2011,7 +2572,7 @@ snapshots:
 
   undici-types@6.21.0: {}
 
-  undici-types@7.10.0: {}
+  undici-types@7.16.0: {}
 
   v8-compile-cache-lib@3.0.1: {}
 

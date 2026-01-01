@@ -22,7 +22,7 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "@trezoa/kit": "^5.0.0",
+    "@trezoa/kit": "^5.1.0",
     "borsh": "^2.0.0",
     "borsher": "^4.0.0"
   }

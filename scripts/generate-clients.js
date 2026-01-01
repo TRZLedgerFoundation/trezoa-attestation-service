@@ -1,5 +1,5 @@
 const codama = require("codama");
-const trezoaanchorIdl = require("@codama/nodes-from-trezoaanchor");
+const trezoaanchorIdl = require("@codoma/nodes-from-trezoaanchor");
 const path = require("path");
 const renderers = require("@codama/renderers");
 const { renderVisitor: renderJavaScriptVisitor } = require("@codama/renderers-js");
