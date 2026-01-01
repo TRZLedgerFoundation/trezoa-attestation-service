@@ -6,7 +6,7 @@ import {
     getCreateAttestationInstruction,
     serializeAttestationData,
     type CreateAttestationInput,
-  } from "sas-lib";
+  } from "trezoa-sas-lib";
   import {
     sendAndConfirmTransactionFactory,
     createKeyPairFromBytes,

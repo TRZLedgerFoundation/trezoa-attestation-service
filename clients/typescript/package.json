@@ -1,5 +1,5 @@
 {
-  "name": "sas-lib",
+  "name": "trezoa-sas-lib",
   "version": "1.0.10",
   "repository": "git@github.com:trezoa-foundation/trezoa-attestation-service.git",
   "main": "dist/src/index.js",

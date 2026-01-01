@@ -16,7 +16,7 @@ import {
     getCloseTokenizedAttestationInstruction,
     TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
     deriveEventAuthorityAddress,
-} from "sas-lib";
+} from "trezoa-sas-lib";
 import {
     airdropFactory,
     generateKeyPairSigner,

@@ -61,7 +61,7 @@ import {
     getCloseTokenizedAttestationInstruction,
     TREZOA_ATTESTATION_SERVICE_PROGRAM_ADDRESS,
     deriveEventAuthorityAddress,
-} from "sas-lib";
+} from "trezoa-sas-lib";
 
 const CONFIG = {
     HTTP_CONNECTION_URL: 'https://api.devnet.trezoa.com', // 'http://127.0.0.1:8899',

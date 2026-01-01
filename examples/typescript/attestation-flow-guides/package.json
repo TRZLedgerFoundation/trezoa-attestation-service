@@ -17,7 +17,7 @@
     "@trezoa-program/token-2022": "^0.6.1",
     "@trezoa/kit": "^5.0.0",
     "gill": "^0.10.2",
-    "sas-lib": "^1.0.10"
+    "trezoa-sas-lib": "^1.0.10"
   },
   "devDependencies": {
     "@types/node": "^24.0.4",

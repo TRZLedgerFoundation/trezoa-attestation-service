@@ -7,7 +7,7 @@ import {
     getCreateCredentialInstruction,
     serializeAttestationData,
     type CreateAttestationInput,
-  } from "sas-lib";
+  } from "trezoa-sas-lib";
   import {
     sendAndConfirmTransactionFactory,
     type Address,
