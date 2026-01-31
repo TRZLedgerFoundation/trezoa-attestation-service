@@ -61,9 +61,9 @@ For local development and testing:
    cargo run tokenized
    ```
 
-## Project Structure
+## Trezoa Structure
 
-Each demo is a complete Rust project with:
+Each demo is a complete Rust trezoa with:
 
 ```
 standard-demo/

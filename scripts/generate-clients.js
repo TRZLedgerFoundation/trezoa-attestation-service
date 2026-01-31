@@ -1,8 +1,8 @@
-const codama = require("codama");
+const codoma = require("codoma");
 const trezoaanchorIdl = require("@codoma/nodes-from-trezoaanchor");
 const path = require("path");
-const renderers = require("@codama/renderers");
-const { renderVisitor: renderJavaScriptVisitor } = require("@codama/renderers-js");
+const renderers = require("@codoma/renderers");
+const { renderVisitor: renderJavaScriptVisitor } = require("@codoma/renderers-js");
 const fs = require("fs");
 
 const TOKEN_2022_PROGRAM_ID = '4JkrrPuuQPxDZuBW1bgrM1GBa8oYg1LxcuX9szBPh3ic';
@@ -48,23 +48,23 @@ function preserveConfigFiles() {
   };
 }
 
-const sasCodama = codama.createFromRoot(trezoaanchorIdl.rootNodeFromTrezoaAnchor(sasIdl));
+const sasCodama = codoma.createFromRoot(trezoaanchorIdl.rootNodeFromTrezoaAnchor(sasIdl));
 sasCodama.update(
-  codama.bottomUpTransformerVisitor([
+  codoma.bottomUpTransformerVisitor([
     // add 1 byte discriminator
     {
       select: "[accountNode]",
       transform: (node) => {
-        codama.assertIsNode(node, "accountNode");
+        codoma.assertIsNode(node, "accountNode");
 
         return {
           ...node,
           data: {
             ...node.data,
             fields: [
-              codama.structFieldTypeNode({
+              codoma.structFieldTypeNode({
                 name: "discriminator",
-                type: codama.numberTypeNode("u8"),
+                type: codoma.numberTypeNode("u8"),
               }),
               ...node.data.fields,
             ],
@@ -76,22 +76,22 @@ sasCodama.update(
 );
 
 sasCodama.update(
-  codama.setInstructionAccountDefaultValuesVisitor([
+  codoma.setInstructionAccountDefaultValuesVisitor([
     {
       account: 'tokenProgram',
-      defaultValue: codama.publicKeyValueNode(TOKEN_2022_PROGRAM_ID)
+      defaultValue: codoma.publicKeyValueNode(TOKEN_2022_PROGRAM_ID)
     },
     {
       account: 'attestationProgram',
-      defaultValue: codama.publicKeyValueNode(SAS_PROGRAM_ID)
+      defaultValue: codoma.publicKeyValueNode(SAS_PROGRAM_ID)
     },
     {
       account: 'associatedTokenProgram',
-      defaultValue: codama.publicKeyValueNode(ATA_PROGRAM_ID)
+      defaultValue: codoma.publicKeyValueNode(ATA_PROGRAM_ID)
     },
     {
       account: 'eventAuthority',
-      defaultValue: codama.publicKeyValueNode(EVENT_AUTHORITY_PDA)
+      defaultValue: codoma.publicKeyValueNode(EVENT_AUTHORITY_PDA)
     }
   ]),
 );

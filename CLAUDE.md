@@ -2,7 +2,7 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Project Overview
+## Trezoa Overview
 
 Trezoa Attestation Service (SAS) is a Trezoa program that enables creating, managing, and verifying digital attestations on the Trezoa blockchain. The system provides a framework for issuers to create schemas and issue attestations that can optionally be tokenized as TPL Token-2022 NFTs.
 
@@ -141,7 +141,7 @@ The program uses [**Pinocchio**](https://github.com/trezoa-xyz/pinocchio) instea
 ### IDL and Client Generation
 
 - [**Shank**](https://github.com/trezoaplex-foundation/shank): Used for IDL generation with `#[derive(ShankInstruction)]` and `#[account()]` attributes
-- [**Codama**](https://github.com/codama-idl/codama): Transforms Shank-generated IDL into TypeScript and Rust clients
+- [**Codoma**](https://github.com/codoma-idl/codoma): Transforms Shank-generated IDL into TypeScript and Rust clients
 - Automated generation pipeline ensures clients stay in sync with program changes
 
 ### Token Extensions
